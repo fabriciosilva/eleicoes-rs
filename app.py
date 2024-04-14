@@ -21,6 +21,10 @@ time.sleep(2)
 
 
 """
+
+# _VERSAO DE TESTE_
+_Os dados ainda serão revisados_
+
 # Serafina em dados 
 # 🏰⛪🎲
 
