@@ -2,18 +2,20 @@ from babel.numbers import format_currency
 import plotly.graph_objects as go
 from millify import millify
 #import locale
+import locale
+locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
 
 #locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
 
 def moeda(valor):    
     #return locale.currency(valor, grouping=True, symbol=None)
     return format_currency(valor, '', locale='pt_BR')
+def moeda(valor):    
+    return locale.currency(valor, grouping=True, symbol=None)
     
 
 def brl(valor):
     return format_currency(valor, 'BRL', locale='pt_BR')
-
-
 
 
 def bar_chart(x_value, y_value, title, xaxis_title, yaxis_title):
