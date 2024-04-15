@@ -2,10 +2,10 @@ from babel.numbers import format_currency
 import plotly.graph_objects as go
 from millify import millify
 import locale
+locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
 
 
-def moeda(valor):
-    locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
+def moeda(valor):    
     return locale.currency(valor, grouping=True, symbol=None)
     
 
