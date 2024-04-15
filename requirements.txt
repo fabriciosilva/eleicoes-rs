@@ -16,3 +16,5 @@ streamlit-toggle-switch==1.0.2
 streamlit-vertical-slider==2.5.5
 streamlit_folium==0.18.1
 millify==0.1.1
+st-annotated-text==4.0.1
+st-theme==1.2.2
