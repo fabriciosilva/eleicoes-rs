@@ -1,0 +1,2827 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a6edfe0416e1c63cb7c5c48558b0c61b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_a6edfe0416e1c63cb7c5c48558b0c61b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a6edfe0416e1c63cb7c5c48558b0c61b = L.map(
+                "map_a6edfe0416e1c63cb7c5c48558b0c61b",
+                {
+                    center: [-28.710129, -51.932609],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 4,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_87f2bbb11bf0205e33554cf02849a9a8 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_87f2bbb11bf0205e33554cf02849a9a8.addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+            var circle_marker_c6386145a5f325c8b6cee0c2a3b557d0 = L.circleMarker(
+                [-28.7126, -51.9352],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 10.0, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_0cfbfee9ce2c0273c5b122ed02b994a4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_48e660a057d26775474d87778d484b11 = $(`<div id="html_48e660a057d26775474d87778d484b11" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$15110359.94</div>`)[0];
+                popup_0cfbfee9ce2c0273c5b122ed02b994a4.setContent(html_48e660a057d26775474d87778d484b11);
+            
+        
+
+        circle_marker_c6386145a5f325c8b6cee0c2a3b557d0.bindPopup(popup_0cfbfee9ce2c0273c5b122ed02b994a4)
+        ;
+
+        
+    
+    
+            circle_marker_c6386145a5f325c8b6cee0c2a3b557d0.bindTooltip(
+                `<div>
+                     Serafina Corrêa
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1c476513f3826c7bd6b66d40d256583b = L.circleMarker(
+                [-23.5329, -46.6395],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 3.883074985174708, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_75965d1eaa6af35d5134cc7b987348c7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_37c29d1d1066434651ad1d7d1d652106 = $(`<div id="html_37c29d1d1066434651ad1d7d1d652106" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$5867466.07</div>`)[0];
+                popup_75965d1eaa6af35d5134cc7b987348c7.setContent(html_37c29d1d1066434651ad1d7d1d652106);
+            
+        
+
+        circle_marker_1c476513f3826c7bd6b66d40d256583b.bindPopup(popup_75965d1eaa6af35d5134cc7b987348c7)
+        ;
+
+        
+    
+    
+            circle_marker_1c476513f3826c7bd6b66d40d256583b.bindTooltip(
+                `<div>
+                     São Paulo
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ae2c2a74b9ee1e87b05a853a5f95cac7 = L.circleMarker(
+                [-28.8399, -51.8895],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 2.7852138511003597, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_901f2351f0e68bdc12c8996510c1e627 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5b67f6754766dbe253adee3fea3b67dd = $(`<div id="html_5b67f6754766dbe253adee3fea3b67dd" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$4208558.38</div>`)[0];
+                popup_901f2351f0e68bdc12c8996510c1e627.setContent(html_5b67f6754766dbe253adee3fea3b67dd);
+            
+        
+
+        circle_marker_ae2c2a74b9ee1e87b05a853a5f95cac7.bindPopup(popup_901f2351f0e68bdc12c8996510c1e627)
+        ;
+
+        
+    
+    
+            circle_marker_ae2c2a74b9ee1e87b05a853a5f95cac7.bindTooltip(
+                `<div>
+                     Guaporé
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b3714fd206322c3931fd8f0b0925e4cb = L.circleMarker(
+                [-15.7795, -47.9297],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 2.5442509015440433, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_80680151530d06422b19bde0ae78c737 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6aec4a456aaa35f7959175312c11aa69 = $(`<div id="html_6aec4a456aaa35f7959175312c11aa69" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$3844454.69</div>`)[0];
+                popup_80680151530d06422b19bde0ae78c737.setContent(html_6aec4a456aaa35f7959175312c11aa69);
+            
+        
+
+        circle_marker_b3714fd206322c3931fd8f0b0925e4cb.bindPopup(popup_80680151530d06422b19bde0ae78c737)
+        ;
+
+        
+    
+    
+            circle_marker_b3714fd206322c3931fd8f0b0925e4cb.bindTooltip(
+                `<div>
+                     Brasília
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_55466c5d907a5eece74158be37bc73ec = L.circleMarker(
+                [-28.2576, -52.4091],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 1.2889959191799372, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_2174704b4ce219026afedc4f0b8829d3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f54392670d6c0285bb011426a41f8f66 = $(`<div id="html_f54392670d6c0285bb011426a41f8f66" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$1947719.23</div>`)[0];
+                popup_2174704b4ce219026afedc4f0b8829d3.setContent(html_f54392670d6c0285bb011426a41f8f66);
+            
+        
+
+        circle_marker_55466c5d907a5eece74158be37bc73ec.bindPopup(popup_2174704b4ce219026afedc4f0b8829d3)
+        ;
+
+        
+    
+    
+            circle_marker_55466c5d907a5eece74158be37bc73ec.bindTooltip(
+                `<div>
+                     Passo Fundo
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_93ccdcfdb6b9d1126f0dbaaedd90d91a = L.circleMarker(
+                [-29.1629, -51.1792],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 1.085058447654689, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_acc3e0dbaa7e7c6bb075b75b2878effc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bb701a9e59c01544f10d8a6610ae419e = $(`<div id="html_bb701a9e59c01544f10d8a6610ae419e" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$1639562.3699999999</div>`)[0];
+                popup_acc3e0dbaa7e7c6bb075b75b2878effc.setContent(html_bb701a9e59c01544f10d8a6610ae419e);
+            
+        
+
+        circle_marker_93ccdcfdb6b9d1126f0dbaaedd90d91a.bindPopup(popup_acc3e0dbaa7e7c6bb075b75b2878effc)
+        ;
+
+        
+    
+    
+            circle_marker_93ccdcfdb6b9d1126f0dbaaedd90d91a.bindTooltip(
+                `<div>
+                     Caxias do Sul
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3e5b92d987e1a64fbb349492292cf7ec = L.circleMarker(
+                [-30.0318, -51.2065],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.9706381818989284, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_02a6eb444f9c9b485761f40c118a67b6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2b647631257f7566463532f4327c49de = $(`<div id="html_2b647631257f7566463532f4327c49de" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$1466669.23</div>`)[0];
+                popup_02a6eb444f9c9b485761f40c118a67b6.setContent(html_2b647631257f7566463532f4327c49de);
+            
+        
+
+        circle_marker_3e5b92d987e1a64fbb349492292cf7ec.bindPopup(popup_02a6eb444f9c9b485761f40c118a67b6)
+        ;
+
+        
+    
+    
+            circle_marker_3e5b92d987e1a64fbb349492292cf7ec.bindTooltip(
+                `<div>
+                     Porto Alegre
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_fd9b6560ecd180e26fdb18654d1d7b7d = L.circleMarker(
+                [-28.5964, -51.7896],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.6413447090923501, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_73db402a463ece5d2d86b4c569655d5d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fa55068752e1d9bce484f800ae223937 = $(`<div id="html_fa55068752e1d9bce484f800ae223937" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$969094.94</div>`)[0];
+                popup_73db402a463ece5d2d86b4c569655d5d.setContent(html_fa55068752e1d9bce484f800ae223937);
+            
+        
+
+        circle_marker_fd9b6560ecd180e26fdb18654d1d7b7d.bindPopup(popup_73db402a463ece5d2d86b4c569655d5d)
+        ;
+
+        
+    
+    
+            circle_marker_fd9b6560ecd180e26fdb18654d1d7b7d.bindTooltip(
+                `<div>
+                     Paraí
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f39b77e47bbf1103ce529f0219d1914d = L.circleMarker(
+                [-28.6537, -51.7458],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.451672648904484, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_fe6aa49c50db44e95d4035e34c2fbbf0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4734dcca9636ff7cbbacb0dc6f2a5170 = $(`<div id="html_4734dcca9636ff7cbbacb0dc6f2a5170" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$682493.63</div>`)[0];
+                popup_fe6aa49c50db44e95d4035e34c2fbbf0.setContent(html_4734dcca9636ff7cbbacb0dc6f2a5170);
+            
+        
+
+        circle_marker_f39b77e47bbf1103ce529f0219d1914d.bindPopup(popup_fe6aa49c50db44e95d4035e34c2fbbf0)
+        ;
+
+        
+    
+    
+            circle_marker_f39b77e47bbf1103ce529f0219d1914d.bindTooltip(
+                `<div>
+                     Nova Araçá
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_753d9bc219ed26b553b17edef8159d90 = L.circleMarker(
+                [-28.7291, -51.7072],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.4473679930089078, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_85287a31041a349e2e2a49c307883854 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1fd81d41cfbcacaed13613028b004dde = $(`<div id="html_1fd81d41cfbcacaed13613028b004dde" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$675989.14</div>`)[0];
+                popup_85287a31041a349e2e2a49c307883854.setContent(html_1fd81d41cfbcacaed13613028b004dde);
+            
+        
+
+        circle_marker_753d9bc219ed26b553b17edef8159d90.bindPopup(popup_85287a31041a349e2e2a49c307883854)
+        ;
+
+        
+    
+    
+            circle_marker_753d9bc219ed26b553b17edef8159d90.bindTooltip(
+                `<div>
+                     Nova Bassano
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_520733fd46ce011fa641b4d158407f30 = L.circleMarker(
+                [-28.5605, -51.9815],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.25668354131873844, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_1aa2e58e6d9e05cf2332405dcca3ad0d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_aa4d1b42cdcc571bd38d0a81d491b8b8 = $(`<div id="html_aa4d1b42cdcc571bd38d0a81d491b8b8" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$387858.07</div>`)[0];
+                popup_1aa2e58e6d9e05cf2332405dcca3ad0d.setContent(html_aa4d1b42cdcc571bd38d0a81d491b8b8);
+            
+        
+
+        circle_marker_520733fd46ce011fa641b4d158407f30.bindPopup(popup_1aa2e58e6d9e05cf2332405dcca3ad0d)
+        ;
+
+        
+    
+    
+            circle_marker_520733fd46ce011fa641b4d158407f30.bindTooltip(
+                `<div>
+                     Casca
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0b7af810488695c04b5b9112a4d358a2 = L.circleMarker(
+                [-29.722, -52.4343],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.2498032220931992, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_d6c83de08b932d7676c4f9235ec1854a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8d66d2725ade38c88de3a869f5a73e96 = $(`<div id="html_8d66d2725ade38c88de3a869f5a73e96" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$377461.66</div>`)[0];
+                popup_d6c83de08b932d7676c4f9235ec1854a.setContent(html_8d66d2725ade38c88de3a869f5a73e96);
+            
+        
+
+        circle_marker_0b7af810488695c04b5b9112a4d358a2.bindPopup(popup_d6c83de08b932d7676c4f9235ec1854a)
+        ;
+
+        
+    
+    
+            circle_marker_0b7af810488695c04b5b9112a4d358a2.bindTooltip(
+                `<div>
+                     Santa Cruz do Sul
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f3f7f16eb59bef6562783aafc46bb76b = L.circleMarker(
+                [-28.4498, -52.1986],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.2228982375915527, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_07d0aeda70a29189df800da7481e1e3c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_88918ca3eead2c41873592aa716f68c3 = $(`<div id="html_88918ca3eead2c41873592aa716f68c3" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$336807.26</div>`)[0];
+                popup_07d0aeda70a29189df800da7481e1e3c.setContent(html_88918ca3eead2c41873592aa716f68c3);
+            
+        
+
+        circle_marker_f3f7f16eb59bef6562783aafc46bb76b.bindPopup(popup_07d0aeda70a29189df800da7481e1e3c)
+        ;
+
+        
+    
+    
+            circle_marker_f3f7f16eb59bef6562783aafc46bb76b.bindTooltip(
+                `<div>
+                     Marau
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ab489bba217fc5b0de4a26e9cd2e5b05 = L.circleMarker(
+                [-28.5359, -52.1486],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.20712706463827626, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_641efcd0b4533df498d4e70872cb9eaf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_991e922be9c65fcb5196c73dd63a5b8e = $(`<div id="html_991e922be9c65fcb5196c73dd63a5b8e" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$312976.45</div>`)[0];
+                popup_641efcd0b4533df498d4e70872cb9eaf.setContent(html_991e922be9c65fcb5196c73dd63a5b8e);
+            
+        
+
+        circle_marker_ab489bba217fc5b0de4a26e9cd2e5b05.bindPopup(popup_641efcd0b4533df498d4e70872cb9eaf)
+        ;
+
+        
+    
+    
+            circle_marker_ab489bba217fc5b0de4a26e9cd2e5b05.bindTooltip(
+                `<div>
+                     Vila Maria
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_45cb13cf8f2db441ddec8cc18b98dc07 = L.circleMarker(
+                [-28.7799, -51.6113],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.2032485336017747, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_2e34446646f8a83b3221ad671f826297 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f9c06b9254913cbc78fa4a07c02024be = $(`<div id="html_f9c06b9254913cbc78fa4a07c02024be" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$307115.85</div>`)[0];
+                popup_2e34446646f8a83b3221ad671f826297.setContent(html_f9c06b9254913cbc78fa4a07c02024be);
+            
+        
+
+        circle_marker_45cb13cf8f2db441ddec8cc18b98dc07.bindPopup(popup_2e34446646f8a83b3221ad671f826297)
+        ;
+
+        
+    
+    
+            circle_marker_45cb13cf8f2db441ddec8cc18b98dc07.bindTooltip(
+                `<div>
+                     Nova Prata
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f2fc364318b5086dd6145ee2d33d4e72 = L.circleMarker(
+                [-28.5312, -51.886],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.19959316071725558, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_6e01e807e0793c135318896e41a6950c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d7abba6764492063726d882893fd242b = $(`<div id="html_d7abba6764492063726d882893fd242b" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$301592.45</div>`)[0];
+                popup_6e01e807e0793c135318896e41a6950c.setContent(html_d7abba6764492063726d882893fd242b);
+            
+        
+
+        circle_marker_f2fc364318b5086dd6145ee2d33d4e72.bindPopup(popup_6e01e807e0793c135318896e41a6950c)
+        ;
+
+        
+    
+    
+            circle_marker_f2fc364318b5086dd6145ee2d33d4e72.bindTooltip(
+                `<div>
+                     São Domingos do Sul
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_780657170ff95514bf0981e737f51edc = L.circleMarker(
+                [-29.1662, -51.5165],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.1626848010081221, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_672eecf830e1cb367464e0ac64af1bb4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b2ac70bfacd4c3c46716ff15211c8ed8 = $(`<div id="html_b2ac70bfacd4c3c46716ff15211c8ed8" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$245822.58999999997</div>`)[0];
+                popup_672eecf830e1cb367464e0ac64af1bb4.setContent(html_b2ac70bfacd4c3c46716ff15211c8ed8);
+            
+        
+
+        circle_marker_780657170ff95514bf0981e737f51edc.bindPopup(popup_672eecf830e1cb367464e0ac64af1bb4)
+        ;
+
+        
+    
+    
+            circle_marker_780657170ff95514bf0981e737f51edc.bindTooltip(
+                `<div>
+                     Bento Gonçalves
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6f70bc163f52e19997790e894270c718 = L.circleMarker(
+                [-29.9128, -51.1857],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.1185517755442694, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_3f47b6c73a42a4046695c7666f2e5494 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_27937e34140d6ecb638dd22bb720bcd4 = $(`<div id="html_27937e34140d6ecb638dd22bb720bcd4" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$179136.0</div>`)[0];
+                popup_3f47b6c73a42a4046695c7666f2e5494.setContent(html_27937e34140d6ecb638dd22bb720bcd4);
+            
+        
+
+        circle_marker_6f70bc163f52e19997790e894270c718.bindPopup(popup_3f47b6c73a42a4046695c7666f2e5494)
+        ;
+
+        
+    
+    
+            circle_marker_6f70bc163f52e19997790e894270c718.bindTooltip(
+                `<div>
+                     Canoas
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b22e3fa24404ff29f082747ba2eca30a = L.circleMarker(
+                [-28.6294, -52.9498],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.10382432359185746, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_c579a59fe685e7296b014e86a4a13798 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b0b8867108e2191db2073a25008dd310 = $(`<div id="html_b0b8867108e2191db2073a25008dd310" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$156882.28999999998</div>`)[0];
+                popup_c579a59fe685e7296b014e86a4a13798.setContent(html_b0b8867108e2191db2073a25008dd310);
+            
+        
+
+        circle_marker_b22e3fa24404ff29f082747ba2eca30a.bindPopup(popup_c579a59fe685e7296b014e86a4a13798)
+        ;
+
+        
+    
+    
+            circle_marker_b22e3fa24404ff29f082747ba2eca30a.bindTooltip(
+                `<div>
+                     Selbach
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1858a70e7ebf83a45a82242bb90438d8 = L.circleMarker(
+                [-26.8747, -52.4036],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.0643862888682452, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_82be4a70f4937f2b3f74bf329b4a2151 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e569fd4ae0e9140c86e5cd6c15198840 = $(`<div id="html_e569fd4ae0e9140c86e5cd6c15198840" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$97290.0</div>`)[0];
+                popup_82be4a70f4937f2b3f74bf329b4a2151.setContent(html_e569fd4ae0e9140c86e5cd6c15198840);
+            
+        
+
+        circle_marker_1858a70e7ebf83a45a82242bb90438d8.bindPopup(popup_82be4a70f4937f2b3f74bf329b4a2151)
+        ;
+
+        
+    
+    
+            circle_marker_1858a70e7ebf83a45a82242bb90438d8.bindTooltip(
+                `<div>
+                     Xanxerê
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_999532e0b0c2f8b55ad201e4be71a351 = L.circleMarker(
+                [-29.4591, -51.9644],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.06150672146066695, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_5f5ed8a68a121cd798f3f83a5adb9f70 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_64a98eec01e339cf719dc8f4af03c519 = $(`<div id="html_64a98eec01e339cf719dc8f4af03c519" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$92938.87000000001</div>`)[0];
+                popup_5f5ed8a68a121cd798f3f83a5adb9f70.setContent(html_64a98eec01e339cf719dc8f4af03c519);
+            
+        
+
+        circle_marker_999532e0b0c2f8b55ad201e4be71a351.bindPopup(popup_5f5ed8a68a121cd798f3f83a5adb9f70)
+        ;
+
+        
+    
+    
+            circle_marker_999532e0b0c2f8b55ad201e4be71a351.bindTooltip(
+                `<div>
+                     Lajeado
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a19b80e8ab6c1a06ee60a1c0e5dbb414 = L.circleMarker(
+                [-20.121, -40.3074],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.05982938881600196, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_026faf04c35f6b739bde4257844315ce = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5d1bdadb5a9fcd7749ddaf2360354dd8 = $(`<div id="html_5d1bdadb5a9fcd7749ddaf2360354dd8" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$90404.36</div>`)[0];
+                popup_026faf04c35f6b739bde4257844315ce.setContent(html_5d1bdadb5a9fcd7749ddaf2360354dd8);
+            
+        
+
+        circle_marker_a19b80e8ab6c1a06ee60a1c0e5dbb414.bindPopup(popup_026faf04c35f6b739bde4257844315ce)
+        ;
+
+        
+    
+    
+            circle_marker_a19b80e8ab6c1a06ee60a1c0e5dbb414.bindTooltip(
+                `<div>
+                     Serra
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_424357ebc8299c85910cf2d478d9e4ed = L.circleMarker(
+                [-27.6364, -52.2697],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.055574612605819904, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_c4973829618fb5c158ec01748dd8667c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3640b94d3287caef93dfc1ec4efca682 = $(`<div id="html_3640b94d3287caef93dfc1ec4efca682" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$83975.24</div>`)[0];
+                popup_c4973829618fb5c158ec01748dd8667c.setContent(html_3640b94d3287caef93dfc1ec4efca682);
+            
+        
+
+        circle_marker_424357ebc8299c85910cf2d478d9e4ed.bindPopup(popup_c4973829618fb5c158ec01748dd8667c)
+        ;
+
+        
+    
+    
+            circle_marker_424357ebc8299c85910cf2d478d9e4ed.bindTooltip(
+                `<div>
+                     Erechim
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9ea41947b0014ef44841681ca9349014 = L.circleMarker(
+                [-26.2292, -52.6706],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.052973020045742204, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_9f02471a68bab53a44e38708396afb5a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_66c1914ebf8dab9d5b0aa4f839c0fb00 = $(`<div id="html_66c1914ebf8dab9d5b0aa4f839c0fb00" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$80044.14</div>`)[0];
+                popup_9f02471a68bab53a44e38708396afb5a.setContent(html_66c1914ebf8dab9d5b0aa4f839c0fb00);
+            
+        
+
+        circle_marker_9ea41947b0014ef44841681ca9349014.bindPopup(popup_9f02471a68bab53a44e38708396afb5a)
+        ;
+
+        
+    
+    
+            circle_marker_9ea41947b0014ef44841681ca9349014.bindTooltip(
+                `<div>
+                     Pato Branco
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_567e07881a1ed18af08e65ce90bf97f6 = L.circleMarker(
+                [-24.7246, -53.7412],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.04931953990236979, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_2d8c31254fbee2c794c596c44bd336af = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e90bc9ed93cdff8d3c2ab9b68e141d15 = $(`<div id="html_e90bc9ed93cdff8d3c2ab9b68e141d15" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$74523.6</div>`)[0];
+                popup_2d8c31254fbee2c794c596c44bd336af.setContent(html_e90bc9ed93cdff8d3c2ab9b68e141d15);
+            
+        
+
+        circle_marker_567e07881a1ed18af08e65ce90bf97f6.bindPopup(popup_2d8c31254fbee2c794c596c44bd336af)
+        ;
+
+        
+    
+    
+            circle_marker_567e07881a1ed18af08e65ce90bf97f6.bindTooltip(
+                `<div>
+                     Toledo
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a057046a5c9d02851570e8214981a3fb = L.circleMarker(
+                [-27.7051, -52.4169],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.04094762814763234, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_0374f0c83ddffe7f1b2beee86529eaf4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d3ec45ffac8f0dec2fb1a7a53726101f = $(`<div id="html_d3ec45ffac8f0dec2fb1a7a53726101f" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$61873.34</div>`)[0];
+                popup_0374f0c83ddffe7f1b2beee86529eaf4.setContent(html_d3ec45ffac8f0dec2fb1a7a53726101f);
+            
+        
+
+        circle_marker_a057046a5c9d02851570e8214981a3fb.bindPopup(popup_0374f0c83ddffe7f1b2beee86529eaf4)
+        ;
+
+        
+    
+    
+            circle_marker_a057046a5c9d02851570e8214981a3fb.bindTooltip(
+                `<div>
+                     Paulo Bento
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_11931c6a0c0978d284f342449f1b5ea9 = L.circleMarker(
+                [-29.4856, -51.3548],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.04008161303932513, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_0b866d949be35925159652006bba7b2d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_adfe5b34a711fd4519256d23d423d445 = $(`<div id="html_adfe5b34a711fd4519256d23d423d445" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$60564.759999999995</div>`)[0];
+                popup_0b866d949be35925159652006bba7b2d.setContent(html_adfe5b34a711fd4519256d23d423d445);
+            
+        
+
+        circle_marker_11931c6a0c0978d284f342449f1b5ea9.bindPopup(popup_0b866d949be35925159652006bba7b2d)
+        ;
+
+        
+    
+    
+            circle_marker_11931c6a0c0978d284f342449f1b5ea9.bindTooltip(
+                `<div>
+                     Bom Princípio
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_84bc88acfa1a26bdb991bf94e177f50a = L.circleMarker(
+                [-27.5003, -52.1448],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.037926879457247396, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_d403a367246ac487c9f85d74e06d75af = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_22aeeb759a6af1a68dd6ee17591aacc2 = $(`<div id="html_22aeeb759a6af1a68dd6ee17591aacc2" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$57308.88</div>`)[0];
+                popup_d403a367246ac487c9f85d74e06d75af.setContent(html_22aeeb759a6af1a68dd6ee17591aacc2);
+            
+        
+
+        circle_marker_84bc88acfa1a26bdb991bf94e177f50a.bindPopup(popup_d403a367246ac487c9f85d74e06d75af)
+        ;
+
+        
+    
+    
+            circle_marker_84bc88acfa1a26bdb991bf94e177f50a.bindTooltip(
+                `<div>
+                     Três Arroios
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e47196ca8e0e02d5f156e2d5c2a19f38 = L.circleMarker(
+                [-28.5632, -52.7495],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.034512745035245006, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_d871a90cdf62b03cd4c07edc69025783 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f59a3c3159804ab90bcb9b33db3f4432 = $(`<div id="html_f59a3c3159804ab90bcb9b33db3f4432" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$52150.0</div>`)[0];
+                popup_d871a90cdf62b03cd4c07edc69025783.setContent(html_f59a3c3159804ab90bcb9b33db3f4432);
+            
+        
+
+        circle_marker_e47196ca8e0e02d5f156e2d5c2a19f38.bindPopup(popup_d871a90cdf62b03cd4c07edc69025783)
+        ;
+
+        
+    
+    
+            circle_marker_e47196ca8e0e02d5f156e2d5c2a19f38.bindTooltip(
+                `<div>
+                     Victor Graeff
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_458c2a0b60fedf762b08c34c903c42c2 = L.circleMarker(
+                [-27.6208, -52.3798],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.0317348959193622, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_3d7d02f448b2f76424536bfa4199b1cd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_32968ae29c53ec65b10a2d14e5d741fc = $(`<div id="html_32968ae29c53ec65b10a2d14e5d741fc" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$47952.57</div>`)[0];
+                popup_3d7d02f448b2f76424536bfa4199b1cd.setContent(html_32968ae29c53ec65b10a2d14e5d741fc);
+            
+        
+
+        circle_marker_458c2a0b60fedf762b08c34c903c42c2.bindPopup(popup_3d7d02f448b2f76424536bfa4199b1cd)
+        ;
+
+        
+    
+    
+            circle_marker_458c2a0b60fedf762b08c34c903c42c2.bindTooltip(
+                `<div>
+                     Barão de Cotegipe
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5cb3477b394da4ebdae105411248c8c7 = L.circleMarker(
+                [-27.0704, -52.867],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.028386517707267803, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_a9750aa5af066dec64557b7a455177bb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a53aed55b3b9ce6ab639183b4a1904a2 = $(`<div id="html_a53aed55b3b9ce6ab639183b4a1904a2" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$42893.05</div>`)[0];
+                popup_a9750aa5af066dec64557b7a455177bb.setContent(html_a53aed55b3b9ce6ab639183b4a1904a2);
+            
+        
+
+        circle_marker_5cb3477b394da4ebdae105411248c8c7.bindPopup(popup_a9750aa5af066dec64557b7a455177bb)
+        ;
+
+        
+    
+    
+            circle_marker_5cb3477b394da4ebdae105411248c8c7.bindTooltip(
+                `<div>
+                     Planalto Alegre
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_75b5e695340880bcfb8372ef5fd6524b = L.circleMarker(
+                [-29.4527, -51.3032],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.02335312999830499, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_f5a208363a504585f7b5b0bcfec4b98c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_db4d3c87ef2e0a73bc9975081e618503 = $(`<div id="html_db4d3c87ef2e0a73bc9975081e618503" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$35287.42</div>`)[0];
+                popup_f5a208363a504585f7b5b0bcfec4b98c.setContent(html_db4d3c87ef2e0a73bc9975081e618503);
+            
+        
+
+        circle_marker_75b5e695340880bcfb8372ef5fd6524b.bindPopup(popup_f5a208363a504585f7b5b0bcfec4b98c)
+        ;
+
+        
+    
+    
+            circle_marker_75b5e695340880bcfb8372ef5fd6524b.bindTooltip(
+                `<div>
+                     Feliz
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6e1c8dd984741afab700ff7b4cab949a = L.circleMarker(
+                [-29.4482, -51.8044],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.022944516303825387, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_975097cf3a376690622e5ee0953814ca = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_909fadc91e45f7dcd16856b4d50eb6ac = $(`<div id="html_909fadc91e45f7dcd16856b4d50eb6ac" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$34669.99</div>`)[0];
+                popup_975097cf3a376690622e5ee0953814ca.setContent(html_909fadc91e45f7dcd16856b4d50eb6ac);
+            
+        
+
+        circle_marker_6e1c8dd984741afab700ff7b4cab949a.bindPopup(popup_975097cf3a376690622e5ee0953814ca)
+        ;
+
+        
+    
+    
+            circle_marker_6e1c8dd984741afab700ff7b4cab949a.bindTooltip(
+                `<div>
+                     Teutônia
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_20407c2f1ca3efc90911dbab9079a575 = L.circleMarker(
+                [-27.7707, -51.5966],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.022898197089539354, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_2b0f9f0dacb96508bd8c6b0cbf010b82 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_72918e5bef04e8fd2492185a0e531946 = $(`<div id="html_72918e5bef04e8fd2492185a0e531946" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$34600.0</div>`)[0];
+                popup_2b0f9f0dacb96508bd8c6b0cbf010b82.setContent(html_72918e5bef04e8fd2492185a0e531946);
+            
+        
+
+        circle_marker_20407c2f1ca3efc90911dbab9079a575.bindPopup(popup_2b0f9f0dacb96508bd8c6b0cbf010b82)
+        ;
+
+        
+    
+    
+            circle_marker_20407c2f1ca3efc90911dbab9079a575.bindTooltip(
+                `<div>
+                     São José do Ouro
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_27e3b4c2d1e6bdd43bd976a6d4328b45 = L.circleMarker(
+                [-29.0451, -51.7684],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.021474855747215246, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_49cc68482bad3b4114e469fdbe25867f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_090b0a294dc4069b8fb453b4c21f7174 = $(`<div id="html_090b0a294dc4069b8fb453b4c21f7174" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$32449.28</div>`)[0];
+                popup_49cc68482bad3b4114e469fdbe25867f.setContent(html_090b0a294dc4069b8fb453b4c21f7174);
+            
+        
+
+        circle_marker_27e3b4c2d1e6bdd43bd976a6d4328b45.bindPopup(popup_49cc68482bad3b4114e469fdbe25867f)
+        ;
+
+        
+    
+    
+            circle_marker_27e3b4c2d1e6bdd43bd976a6d4328b45.bindTooltip(
+                `<div>
+                     São Valentim do Sul
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7940b81d96c2ec178240032a7c0756d8 = L.circleMarker(
+                [-26.9155, -49.0709],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.019787655700278444, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_ea8e320443fe6497a07396d961840616 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ae83a4c3d5915b9af5f14f809409e4de = $(`<div id="html_ae83a4c3d5915b9af5f14f809409e4de" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$29899.86</div>`)[0];
+                popup_ea8e320443fe6497a07396d961840616.setContent(html_ae83a4c3d5915b9af5f14f809409e4de);
+            
+        
+
+        circle_marker_7940b81d96c2ec178240032a7c0756d8.bindPopup(popup_ea8e320443fe6497a07396d961840616)
+        ;
+
+        
+    
+    
+            circle_marker_7940b81d96c2ec178240032a7c0756d8.bindTooltip(
+                `<div>
+                     Blumenau
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7d2424f835007adaf91f7056c7a562ac = L.circleMarker(
+                [-28.2958, -52.7933],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.019356256314301934, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_3c316c9f3fd8fcde2a492c293f6a0a73 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0fbcedf1c100c781ee640e520e6dac03 = $(`<div id="html_0fbcedf1c100c781ee640e520e6dac03" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$29248.0</div>`)[0];
+                popup_3c316c9f3fd8fcde2a492c293f6a0a73.setContent(html_0fbcedf1c100c781ee640e520e6dac03);
+            
+        
+
+        circle_marker_7d2424f835007adaf91f7056c7a562ac.bindPopup(popup_3c316c9f3fd8fcde2a492c293f6a0a73)
+        ;
+
+        
+    
+    
+            circle_marker_7d2424f835007adaf91f7056c7a562ac.bindTooltip(
+                `<div>
+                     Carazinho
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f73954f056012f3ebe707551e3ebdab6 = L.circleMarker(
+                [-28.0566, -51.8599],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.018481459151793046, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_74176ae32d7127be865ef26ea4ee22ec = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e281d0e174c5e95a233e94404fc230a8 = $(`<div id="html_e281d0e174c5e95a233e94404fc230a8" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$27926.15</div>`)[0];
+                popup_74176ae32d7127be865ef26ea4ee22ec.setContent(html_e281d0e174c5e95a233e94404fc230a8);
+            
+        
+
+        circle_marker_f73954f056012f3ebe707551e3ebdab6.bindPopup(popup_74176ae32d7127be865ef26ea4ee22ec)
+        ;
+
+        
+    
+    
+            circle_marker_f73954f056012f3ebe707551e3ebdab6.bindTooltip(
+                `<div>
+                     Ibiaçá
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_cee391820928c738b6e2eaaa8089df37 = L.circleMarker(
+                [-28.1463, -54.7428],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.017646171306227667, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_111a77bb3ce4018df58568269e028931 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_caf037489004d5ae31fa510eb605a409 = $(`<div id="html_caf037489004d5ae31fa510eb605a409" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$26664.0</div>`)[0];
+                popup_111a77bb3ce4018df58568269e028931.setContent(html_caf037489004d5ae31fa510eb605a409);
+            
+        
+
+        circle_marker_cee391820928c738b6e2eaaa8089df37.bindPopup(popup_111a77bb3ce4018df58568269e028931)
+        ;
+
+        
+    
+    
+            circle_marker_cee391820928c738b6e2eaaa8089df37.bindTooltip(
+                `<div>
+                     Cerro Largo
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_31b67a1ef50011e4d4a438035038c077 = L.circleMarker(
+                [-29.8268, -50.5175],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.01707496717646026, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_fbd2b9a1c85e7332c62e1feaad4e9ac5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3dc40691ffc0cb768959c3001c8bafa1 = $(`<div id="html_3dc40691ffc0cb768959c3001c8bafa1" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$25800.89</div>`)[0];
+                popup_fbd2b9a1c85e7332c62e1feaad4e9ac5.setContent(html_3dc40691ffc0cb768959c3001c8bafa1);
+            
+        
+
+        circle_marker_31b67a1ef50011e4d4a438035038c077.bindPopup(popup_fbd2b9a1c85e7332c62e1feaad4e9ac5)
+        ;
+
+        
+    
+    
+            circle_marker_31b67a1ef50011e4d4a438035038c077.bindTooltip(
+                `<div>
+                     Santo Antônio da Patrulha
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3c88907448678f15da2b4c7385cfdf37 = L.circleMarker(
+                [-31.7649, -52.3371],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.014559547282366062, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_eaa1d02e7cfaa2baeee1ce9fc290d72a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fb10426aef63b53e194ab4a6ebe7c659 = $(`<div id="html_fb10426aef63b53e194ab4a6ebe7c659" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$22000.0</div>`)[0];
+                popup_eaa1d02e7cfaa2baeee1ce9fc290d72a.setContent(html_fb10426aef63b53e194ab4a6ebe7c659);
+            
+        
+
+        circle_marker_3c88907448678f15da2b4c7385cfdf37.bindPopup(popup_eaa1d02e7cfaa2baeee1ce9fc290d72a)
+        ;
+
+        
+    
+    
+            circle_marker_3c88907448678f15da2b4c7385cfdf37.bindTooltip(
+                `<div>
+                     Pelotas
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e45ac0ee1eb9dc522e05b29b568817c1 = L.circleMarker(
+                [-29.6143, -52.1932],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.0138840239963205, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_f4792ad36f8778fa10e47da1290ae899 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_35d3e3991c13e9c4bfa616cf20f8f33b = $(`<div id="html_35d3e3991c13e9c4bfa616cf20f8f33b" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$20979.26</div>`)[0];
+                popup_f4792ad36f8778fa10e47da1290ae899.setContent(html_35d3e3991c13e9c4bfa616cf20f8f33b);
+            
+        
+
+        circle_marker_e45ac0ee1eb9dc522e05b29b568817c1.bindPopup(popup_f4792ad36f8778fa10e47da1290ae899)
+        ;
+
+        
+    
+    
+            circle_marker_e45ac0ee1eb9dc522e05b29b568817c1.bindTooltip(
+                `<div>
+                     Venâncio Aires
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6b1f99ade2cb4818e2de36a997926827 = L.circleMarker(
+                [-28.0652, -52.0097],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.01270651399188311, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_ea981214ff3d7fc7800c2442a5947af4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_39f6aad7ec2730f4b234dd51821fbbd6 = $(`<div id="html_39f6aad7ec2730f4b234dd51821fbbd6" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$19200.0</div>`)[0];
+                popup_ea981214ff3d7fc7800c2442a5947af4.setContent(html_39f6aad7ec2730f4b234dd51821fbbd6);
+            
+        
+
+        circle_marker_6b1f99ade2cb4818e2de36a997926827.bindPopup(popup_ea981214ff3d7fc7800c2442a5947af4)
+        ;
+
+        
+    
+    
+            circle_marker_6b1f99ade2cb4818e2de36a997926827.bindTooltip(
+                `<div>
+                     Tapejara
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4269b0c9f2df6c192d22bc96aa280dff = L.circleMarker(
+                [-26.9101, -48.6705],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.010979209010159422, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_b692b31aaab6340b1820cb6c40408757 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e38383388ef7646574a2d496fdad2438 = $(`<div id="html_e38383388ef7646574a2d496fdad2438" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$16589.98</div>`)[0];
+                popup_b692b31aaab6340b1820cb6c40408757.setContent(html_e38383388ef7646574a2d496fdad2438);
+            
+        
+
+        circle_marker_4269b0c9f2df6c192d22bc96aa280dff.bindPopup(popup_b692b31aaab6340b1820cb6c40408757)
+        ;
+
+        
+    
+    
+            circle_marker_4269b0c9f2df6c192d22bc96aa280dff.bindTooltip(
+                `<div>
+                     Itajaí
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4f474d3263f2c9a77ddc354666363107 = L.circleMarker(
+                [-28.5079, -50.9418],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.010562289755752833, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_626375a06476b8ca7cec9cb6cc156426 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_42cfb078f96c83037e473890ac0a2ea3 = $(`<div id="html_42cfb078f96c83037e473890ac0a2ea3" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$15960.0</div>`)[0];
+                popup_626375a06476b8ca7cec9cb6cc156426.setContent(html_42cfb078f96c83037e473890ac0a2ea3);
+            
+        
+
+        circle_marker_4f474d3263f2c9a77ddc354666363107.bindPopup(popup_626375a06476b8ca7cec9cb6cc156426)
+        ;
+
+        
+    
+    
+            circle_marker_4f474d3263f2c9a77ddc354666363107.bindTooltip(
+                `<div>
+                     Vacaria
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8a06694deaf5c529f0b6f6b2c9dc4d97 = L.circleMarker(
+                [-29.4014, -51.9557],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.010249921286785708, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_d354d79fbbd237ec0de967f6334c7e4f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_309a03951716c4c9ec8ad7e4a439110a = $(`<div id="html_309a03951716c4c9ec8ad7e4a439110a" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$15488.0</div>`)[0];
+                popup_d354d79fbbd237ec0de967f6334c7e4f.setContent(html_309a03951716c4c9ec8ad7e4a439110a);
+            
+        
+
+        circle_marker_8a06694deaf5c529f0b6f6b2c9dc4d97.bindPopup(popup_d354d79fbbd237ec0de967f6334c7e4f)
+        ;
+
+        
+    
+    
+            circle_marker_8a06694deaf5c529f0b6f6b2c9dc4d97.bindTooltip(
+                `<div>
+                     Arroio do Meio
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1ba5c69085b25870abb03cc5ff682df8 = L.circleMarker(
+                [-29.9413, -50.9869],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.009397525973163548, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_cb05f64660e36f24581b41ad7175d2b0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d18d691a74830bc460d6b2a0fd34b207 = $(`<div id="html_d18d691a74830bc460d6b2a0fd34b207" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$14200.0</div>`)[0];
+                popup_cb05f64660e36f24581b41ad7175d2b0.setContent(html_d18d691a74830bc460d6b2a0fd34b207);
+            
+        
+
+        circle_marker_1ba5c69085b25870abb03cc5ff682df8.bindPopup(popup_cb05f64660e36f24581b41ad7175d2b0)
+        ;
+
+        
+    
+    
+            circle_marker_1ba5c69085b25870abb03cc5ff682df8.bindTooltip(
+                `<div>
+                     Gravataí
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b25495e70baf3ebd070156b48a073471 = L.circleMarker(
+                [-27.7291, -52.5372],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.00930004318613207, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_2a100c5f24ce1be4cdd519677d4d4384 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6646dc15c7b6e53b09c63096adaae4ac = $(`<div id="html_6646dc15c7b6e53b09c63096adaae4ac" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$14052.7</div>`)[0];
+                popup_2a100c5f24ce1be4cdd519677d4d4384.setContent(html_6646dc15c7b6e53b09c63096adaae4ac);
+            
+        
+
+        circle_marker_b25495e70baf3ebd070156b48a073471.bindPopup(popup_2a100c5f24ce1be4cdd519677d4d4384)
+        ;
+
+        
+    
+    
+            circle_marker_b25495e70baf3ebd070156b48a073471.bindTooltip(
+                `<div>
+                     Jacutinga
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_dfee3df9d3b26e12f0ff19f94ecbdc7e = L.circleMarker(
+                [-27.815, -50.3259],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.007792071166241193, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_6d7bbf5bba679c2a2fbaa449eca7c288 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_152404094a85c4bbd47b5350af0bf92e = $(`<div id="html_152404094a85c4bbd47b5350af0bf92e" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$11774.1</div>`)[0];
+                popup_6d7bbf5bba679c2a2fbaa449eca7c288.setContent(html_152404094a85c4bbd47b5350af0bf92e);
+            
+        
+
+        circle_marker_dfee3df9d3b26e12f0ff19f94ecbdc7e.bindPopup(popup_6d7bbf5bba679c2a2fbaa449eca7c288)
+        ;
+
+        
+    
+    
+            circle_marker_dfee3df9d3b26e12f0ff19f94ecbdc7e.bindTooltip(
+                `<div>
+                     Lages
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e8a1695974389d67de067778e142bc0e = L.circleMarker(
+                [-27.9798, -52.2588],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.007256253354345972, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_97a5376e339f80c6bc5c2230c3db0577 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_472475db776da966ec2ed07445524739 = $(`<div id="html_472475db776da966ec2ed07445524739" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$10964.46</div>`)[0];
+                popup_97a5376e339f80c6bc5c2230c3db0577.setContent(html_472475db776da966ec2ed07445524739);
+            
+        
+
+        circle_marker_e8a1695974389d67de067778e142bc0e.bindPopup(popup_97a5376e339f80c6bc5c2230c3db0577)
+        ;
+
+        
+    
+    
+            circle_marker_e8a1695974389d67de067778e142bc0e.bindTooltip(
+                `<div>
+                     Sertão
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_56730cbf65b638569b2b826b94a9c108 = L.circleMarker(
+                [-16.6864, -49.2643],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.006971554643191379, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_d8d49f9b473de2b95562c327c107c6a9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c68381cfd1d2d4fbfd3f421c172a02ea = $(`<div id="html_c68381cfd1d2d4fbfd3f421c172a02ea" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$10534.27</div>`)[0];
+                popup_d8d49f9b473de2b95562c327c107c6a9.setContent(html_c68381cfd1d2d4fbfd3f421c172a02ea);
+            
+        
+
+        circle_marker_56730cbf65b638569b2b826b94a9c108.bindPopup(popup_d8d49f9b473de2b95562c327c107c6a9)
+        ;
+
+        
+    
+    
+            circle_marker_56730cbf65b638569b2b826b94a9c108.bindTooltip(
+                `<div>
+                     Goiânia
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e50583f143ac0985fd080541c0d23340 = L.circleMarker(
+                [-29.4193, -51.5134],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.006514338532692823, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_76904fcc8a65d2d2426260b24de3044f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9892741e290992e24b6b868ce13b2464 = $(`<div id="html_9892741e290992e24b6b868ce13b2464" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$9843.4</div>`)[0];
+                popup_76904fcc8a65d2d2426260b24de3044f.setContent(html_9892741e290992e24b6b868ce13b2464);
+            
+        
+
+        circle_marker_e50583f143ac0985fd080541c0d23340.bindPopup(popup_76904fcc8a65d2d2426260b24de3044f)
+        ;
+
+        
+    
+    
+            circle_marker_e50583f143ac0985fd080541c0d23340.bindTooltip(
+                `<div>
+                     São Pedro da Serra
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_cec6430d97abea7bdbe0a995342fed69 = L.circleMarker(
+                [-29.9914, -51.0809],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.006276382586290661, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_24bfd9b12075b604ffcb26064321cccc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6b1e501c6f477563b37be01f662f0d90 = $(`<div id="html_6b1e501c6f477563b37be01f662f0d90" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$9483.84</div>`)[0];
+                popup_24bfd9b12075b604ffcb26064321cccc.setContent(html_6b1e501c6f477563b37be01f662f0d90);
+            
+        
+
+        circle_marker_cec6430d97abea7bdbe0a995342fed69.bindPopup(popup_24bfd9b12075b604ffcb26064321cccc)
+        ;
+
+        
+    
+    
+            circle_marker_cec6430d97abea7bdbe0a995342fed69.bindTooltip(
+                `<div>
+                     Alvorada
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_19a5ff848537f8f4d2f9c4d38ef3b4d3 = L.circleMarker(
+                [-29.7545, -51.1498],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.00578411105672179, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_985d11c1cca9d65788d7de1686acc469 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0bd089b88fd7bb902bf4ecf33e783713 = $(`<div id="html_0bd089b88fd7bb902bf4ecf33e783713" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$8740.0</div>`)[0];
+                popup_985d11c1cca9d65788d7de1686acc469.setContent(html_0bd089b88fd7bb902bf4ecf33e783713);
+            
+        
+
+        circle_marker_19a5ff848537f8f4d2f9c4d38ef3b4d3.bindPopup(popup_985d11c1cca9d65788d7de1686acc469)
+        ;
+
+        
+    
+    
+            circle_marker_19a5ff848537f8f4d2f9c4d38ef3b4d3.bindTooltip(
+                `<div>
+                     São Leopoldo
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_81cb76bf4f2972cbd1770a57c56c826b = L.circleMarker(
+                [-19.9102, -43.9266],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.005426740350700077, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_54def50bae90ed1796fa51f6df25e434 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8500252a2b82593b418423c0363ec0a0 = $(`<div id="html_8500252a2b82593b418423c0363ec0a0" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$8200.0</div>`)[0];
+                popup_54def50bae90ed1796fa51f6df25e434.setContent(html_8500252a2b82593b418423c0363ec0a0);
+            
+        
+
+        circle_marker_81cb76bf4f2972cbd1770a57c56c826b.bindPopup(popup_54def50bae90ed1796fa51f6df25e434)
+        ;
+
+        
+    
+    
+            circle_marker_81cb76bf4f2972cbd1770a57c56c826b.bindTooltip(
+                `<div>
+                     Belo Horizonte
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8493788931dde6ea26d01b786b6acc0d = L.circleMarker(
+                [-27.9007, -53.3134],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.005085914584771963, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_e89ea0588307d5077549c823a343deff = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0f77fab155d9b575b3aac6c6647d8169 = $(`<div id="html_0f77fab155d9b575b3aac6c6647d8169" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$7685.0</div>`)[0];
+                popup_e89ea0588307d5077549c823a343deff.setContent(html_0f77fab155d9b575b3aac6c6647d8169);
+            
+        
+
+        circle_marker_8493788931dde6ea26d01b786b6acc0d.bindPopup(popup_e89ea0588307d5077549c823a343deff)
+        ;
+
+        
+    
+    
+            circle_marker_8493788931dde6ea26d01b786b6acc0d.bindTooltip(
+                `<div>
+                     Palmeira das Missões
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b4d4350ee5dd4d030826bd5b258e8d97 = L.circleMarker(
+                [-27.947, -51.8079],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.005016425836378853, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_047908509a9075a882ba8b1cc9a816e5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bc3e5bcc85af5ce1afacd0c2ac663dbb = $(`<div id="html_bc3e5bcc85af5ce1afacd0c2ac663dbb" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$7580.0</div>`)[0];
+                popup_047908509a9075a882ba8b1cc9a816e5.setContent(html_bc3e5bcc85af5ce1afacd0c2ac663dbb);
+            
+        
+
+        circle_marker_b4d4350ee5dd4d030826bd5b258e8d97.bindPopup(popup_047908509a9075a882ba8b1cc9a816e5)
+        ;
+
+        
+    
+    
+            circle_marker_b4d4350ee5dd4d030826bd5b258e8d97.bindTooltip(
+                `<div>
+                     Sananduva
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e4a8c7c7b1c38f3139040f729952c939 = L.circleMarker(
+                [-29.3948, -51.8556],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.004963482028079339, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_889f0343c73c8f50440c021b725d3b28 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2e743e8e9b29570050c7b7b001595e6f = $(`<div id="html_2e743e8e9b29570050c7b7b001595e6f" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$7500.0</div>`)[0];
+                popup_889f0343c73c8f50440c021b725d3b28.setContent(html_2e743e8e9b29570050c7b7b001595e6f);
+            
+        
+
+        circle_marker_e4a8c7c7b1c38f3139040f729952c939.bindPopup(popup_889f0343c73c8f50440c021b725d3b28)
+        ;
+
+        
+    
+    
+            circle_marker_e4a8c7c7b1c38f3139040f729952c939.bindTooltip(
+                `<div>
+                     Colinas
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c1100a6fc755bf6c85231f7ba8693535 = L.circleMarker(
+                [-27.2335, -52.026],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.004905323254662324, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_b8950e2fb0e2bd6d5d3cf0c88b06721c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_94db066f71f66cf3e6a92bcb4c01b040 = $(`<div id="html_94db066f71f66cf3e6a92bcb4c01b040" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$7412.12</div>`)[0];
+                popup_b8950e2fb0e2bd6d5d3cf0c88b06721c.setContent(html_94db066f71f66cf3e6a92bcb4c01b040);
+            
+        
+
+        circle_marker_c1100a6fc755bf6c85231f7ba8693535.bindPopup(popup_b8950e2fb0e2bd6d5d3cf0c88b06721c)
+        ;
+
+        
+    
+    
+            circle_marker_c1100a6fc755bf6c85231f7ba8693535.bindTooltip(
+                `<div>
+                     Concórdia
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a10f086057c23b6e92fb832bc2d53d74 = L.circleMarker(
+                [-26.8992, -49.2354],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.004738470842806409, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_ef62c1c4d59d4c501191502603df8caa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_edb0385b75483db41182a8525a4f634f = $(`<div id="html_edb0385b75483db41182a8525a4f634f" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$7160.0</div>`)[0];
+                popup_ef62c1c4d59d4c501191502603df8caa.setContent(html_edb0385b75483db41182a8525a4f634f);
+            
+        
+
+        circle_marker_a10f086057c23b6e92fb832bc2d53d74.bindPopup(popup_ef62c1c4d59d4c501191502603df8caa)
+        ;
+
+        
+    
+    
+            circle_marker_a10f086057c23b6e92fb832bc2d53d74.bindTooltip(
+                `<div>
+                     Indaial
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_56e6e012e4c9b239dc42344552be63da = L.circleMarker(
+                [-29.9472, -51.1016],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.004231732417619696, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_ba785106e29bbaffbc44dda26f7f3526 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c2d63d9684df5013f6bfee3184c5b4b9 = $(`<div id="html_c2d63d9684df5013f6bfee3184c5b4b9" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$6394.3</div>`)[0];
+                popup_ba785106e29bbaffbc44dda26f7f3526.setContent(html_c2d63d9684df5013f6bfee3184c5b4b9);
+            
+        
+
+        circle_marker_56e6e012e4c9b239dc42344552be63da.bindPopup(popup_ba785106e29bbaffbc44dda26f7f3526)
+        ;
+
+        
+    
+    
+            circle_marker_56e6e012e4c9b239dc42344552be63da.bindTooltip(
+                `<div>
+                     Cachoeirinha
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_413166df53914ee1c126f77ff6ecdc55 = L.circleMarker(
+                [-27.0861, -48.616],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.004104746693413314, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_dc2dbb957ee1790fa20dbb6161be1e50 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f35dbfbb2895280788df249f8d5649ee = $(`<div id="html_f35dbfbb2895280788df249f8d5649ee" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$6202.42</div>`)[0];
+                popup_dc2dbb957ee1790fa20dbb6161be1e50.setContent(html_f35dbfbb2895280788df249f8d5649ee);
+            
+        
+
+        circle_marker_413166df53914ee1c126f77ff6ecdc55.bindPopup(popup_dc2dbb957ee1790fa20dbb6161be1e50)
+        ;
+
+        
+    
+    
+            circle_marker_413166df53914ee1c126f77ff6ecdc55.bindTooltip(
+                `<div>
+                     Itapema
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_94df02de0a1573d122863b57a6859259 = L.circleMarker(
+                [-27.4555, -53.9296],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.00407666662108646, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_947babd3a275367bfea460425e13a462 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_04fa6ff646b7cc9a43b43277676e2a08 = $(`<div id="html_04fa6ff646b7cc9a43b43277676e2a08" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$6159.99</div>`)[0];
+                popup_947babd3a275367bfea460425e13a462.setContent(html_04fa6ff646b7cc9a43b43277676e2a08);
+            
+        
+
+        circle_marker_94df02de0a1573d122863b57a6859259.bindPopup(popup_947babd3a275367bfea460425e13a462)
+        ;
+
+        
+    
+    
+            circle_marker_94df02de0a1573d122863b57a6859259.bindTooltip(
+                `<div>
+                     Três Passos
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_abf01052ec385cd4727018f846d43dce = L.circleMarker(
+                [-25.4195, -49.2646],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.003878133957939324, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_a52a64b2d4a14037793408ac37203e89 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c7b1676726f840530d10e66b1d77e6a5 = $(`<div id="html_c7b1676726f840530d10e66b1d77e6a5" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$5860.0</div>`)[0];
+                popup_a52a64b2d4a14037793408ac37203e89.setContent(html_c7b1676726f840530d10e66b1d77e6a5);
+            
+        
+
+        circle_marker_abf01052ec385cd4727018f846d43dce.bindPopup(popup_a52a64b2d4a14037793408ac37203e89)
+        ;
+
+        
+    
+    
+            circle_marker_abf01052ec385cd4727018f846d43dce.bindTooltip(
+                `<div>
+                     Curitiba
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3e875a197b269ef0da16a1b0f3c656ec = L.circleMarker(
+                [-28.8737, -52.1781],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.0035522648178558216, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_d5d197091548d93b6837a614215d6f77 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2787f30ed1c29c77252ae4319274a597 = $(`<div id="html_2787f30ed1c29c77252ae4319274a597" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$5367.6</div>`)[0];
+                popup_d5d197091548d93b6837a614215d6f77.setContent(html_2787f30ed1c29c77252ae4319274a597);
+            
+        
+
+        circle_marker_3e875a197b269ef0da16a1b0f3c656ec.bindPopup(popup_d5d197091548d93b6837a614215d6f77)
+        ;
+
+        
+    
+    
+            circle_marker_3e875a197b269ef0da16a1b0f3c656ec.bindTooltip(
+                `<div>
+                     Arvorezinha
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_492bdfb329bdce413377ebe160c2b847 = L.circleMarker(
+                [-29.2351, -51.8703],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.0030811112498224185, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_a399a2ec516f7a8cf3db80bb767c1f05 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6b2b2814ffc6a8e385c5a749f8a19701 = $(`<div id="html_6b2b2814ffc6a8e385c5a749f8a19701" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$4655.67</div>`)[0];
+                popup_a399a2ec516f7a8cf3db80bb767c1f05.setContent(html_6b2b2814ffc6a8e385c5a749f8a19701);
+            
+        
+
+        circle_marker_492bdfb329bdce413377ebe160c2b847.bindPopup(popup_a399a2ec516f7a8cf3db80bb767c1f05)
+        ;
+
+        
+    
+    
+            circle_marker_492bdfb329bdce413377ebe160c2b847.bindTooltip(
+                `<div>
+                     Encantado
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_67492fbc35db435f3ec44e5a3241b032 = L.circleMarker(
+                [-27.78, -54.2357],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.0029608824791502618, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_1857a8a4497aab5b3416791f077e1034 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ecd2164bd23d85135393af67cd2dc7e5 = $(`<div id="html_ecd2164bd23d85135393af67cd2dc7e5" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$4474.0</div>`)[0];
+                popup_1857a8a4497aab5b3416791f077e1034.setContent(html_ecd2164bd23d85135393af67cd2dc7e5);
+            
+        
+
+        circle_marker_67492fbc35db435f3ec44e5a3241b032.bindPopup(popup_1857a8a4497aab5b3416791f077e1034)
+        ;
+
+        
+    
+    
+            circle_marker_67492fbc35db435f3ec44e5a3241b032.bindTooltip(
+                `<div>
+                     Três de Maio
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e9b54708e8445fb0e90e93c3889c4ce4 = L.circleMarker(
+                [-22.9129, -43.2003],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.0027001342232751604, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_8feb6c738440c78051bfc86d3b5389ad = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e21514ae99febf8b6824a89c68929cf8 = $(`<div id="html_e21514ae99febf8b6824a89c68929cf8" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$4080.0</div>`)[0];
+                popup_8feb6c738440c78051bfc86d3b5389ad.setContent(html_e21514ae99febf8b6824a89c68929cf8);
+            
+        
+
+        circle_marker_e9b54708e8445fb0e90e93c3889c4ce4.bindPopup(popup_8feb6c738440c78051bfc86d3b5389ad)
+        ;
+
+        
+    
+    
+            circle_marker_e9b54708e8445fb0e90e93c3889c4ce4.bindTooltip(
+                `<div>
+                     Rio de Janeiro
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_906f9a4dcd42199d91bb9b216a327b34 = L.circleMarker(
+                [-29.6505, -50.7753],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.0025507598861341223, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_4a7a96e37a04d33102abf2946342ff65 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ccf948d5e1848151f639ef2347a934a1 = $(`<div id="html_ccf948d5e1848151f639ef2347a934a1" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$3854.29</div>`)[0];
+                popup_4a7a96e37a04d33102abf2946342ff65.setContent(html_ccf948d5e1848151f639ef2347a934a1);
+            
+        
+
+        circle_marker_906f9a4dcd42199d91bb9b216a327b34.bindPopup(popup_4a7a96e37a04d33102abf2946342ff65)
+        ;
+
+        
+    
+    
+            circle_marker_906f9a4dcd42199d91bb9b216a327b34.bindTooltip(
+                `<div>
+                     Taquara
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0dbf409e8a88e0001d566feb4b026353 = L.circleMarker(
+                [-29.3334, -49.7333],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.0025035869529392565, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_d82d34b67e8ace32e654b51b897187a4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ef20131a5414e50b29fb65b3f7a5edb7 = $(`<div id="html_ef20131a5414e50b29fb65b3f7a5edb7" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$3783.01</div>`)[0];
+                popup_d82d34b67e8ace32e654b51b897187a4.setContent(html_ef20131a5414e50b29fb65b3f7a5edb7);
+            
+        
+
+        circle_marker_0dbf409e8a88e0001d566feb4b026353.bindPopup(popup_d82d34b67e8ace32e654b51b897187a4)
+        ;
+
+        
+    
+    
+            circle_marker_0dbf409e8a88e0001d566feb4b026353.bindTooltip(
+                `<div>
+                     Torres
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0f49d4ddbc7dce385ebc51626cb2e01b = L.circleMarker(
+                [-27.1004, -52.6152],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.0024278045093345407, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_1a1b2ca2f2494217e3ec85b9cc419e8f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_001777def6f73c01eb61ac720b4c35fa = $(`<div id="html_001777def6f73c01eb61ac720b4c35fa" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$3668.5</div>`)[0];
+                popup_1a1b2ca2f2494217e3ec85b9cc419e8f.setContent(html_001777def6f73c01eb61ac720b4c35fa);
+            
+        
+
+        circle_marker_0f49d4ddbc7dce385ebc51626cb2e01b.bindPopup(popup_1a1b2ca2f2494217e3ec85b9cc419e8f)
+        ;
+
+        
+    
+    
+            circle_marker_0f49d4ddbc7dce385ebc51626cb2e01b.bindTooltip(
+                `<div>
+                     Chapecó
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5ca91f83fbe7d5299c31095976f53d64 = L.circleMarker(
+                [-28.4713, -49.0144],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.0023991883809486537, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_f868b392853ed2577a935a2efbf0deca = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fb09616a87d3b3164ecbf1c6f479555d = $(`<div id="html_fb09616a87d3b3164ecbf1c6f479555d" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$3625.2599999999998</div>`)[0];
+                popup_f868b392853ed2577a935a2efbf0deca.setContent(html_fb09616a87d3b3164ecbf1c6f479555d);
+            
+        
+
+        circle_marker_5ca91f83fbe7d5299c31095976f53d64.bindPopup(popup_f868b392853ed2577a935a2efbf0deca)
+        ;
+
+        
+    
+    
+            circle_marker_5ca91f83fbe7d5299c31095976f53d64.bindTooltip(
+                `<div>
+                     Tubarão
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_07167470e16058c5be763d91a1db6231 = L.circleMarker(
+                [-29.7184, -52.5152],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.0023626174453657655, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_c61002accda6757c73b09d3b72bc68e9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5fa5f06272a572345272ab760e00d7ac = $(`<div id="html_5fa5f06272a572345272ab760e00d7ac" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$3570.0</div>`)[0];
+                popup_c61002accda6757c73b09d3b72bc68e9.setContent(html_5fa5f06272a572345272ab760e00d7ac);
+            
+        
+
+        circle_marker_07167470e16058c5be763d91a1db6231.bindPopup(popup_c61002accda6757c73b09d3b72bc68e9)
+        ;
+
+        
+    
+    
+            circle_marker_07167470e16058c5be763d91a1db6231.bindTooltip(
+                `<div>
+                     Vera Cruz
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_95fced78e149e93ce53f1db1f4856a0f = L.circleMarker(
+                [-19.7472, -47.9381],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.00212242462306295, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_079e366df1cdb6330af1ba21f904eaa7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7bc409beb82d8e6340c803c084b5a884 = $(`<div id="html_7bc409beb82d8e6340c803c084b5a884" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$3207.06</div>`)[0];
+                popup_079e366df1cdb6330af1ba21f904eaa7.setContent(html_7bc409beb82d8e6340c803c084b5a884);
+            
+        
+
+        circle_marker_95fced78e149e93ce53f1db1f4856a0f.bindPopup(popup_079e366df1cdb6330af1ba21f904eaa7)
+        ;
+
+        
+    
+    
+            circle_marker_95fced78e149e93ce53f1db1f4856a0f.bindTooltip(
+                `<div>
+                     Uberaba
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9429244e4d8df46a56f760137933c9ea = L.circleMarker(
+                [-27.8702, -54.4796],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.0020648085236810053, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_130ce4289cf3949bf6e920c339c6b662 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b38f637f366cf7861b50cf9e8b89fa47 = $(`<div id="html_b38f637f366cf7861b50cf9e8b89fa47" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$3120.0</div>`)[0];
+                popup_130ce4289cf3949bf6e920c339c6b662.setContent(html_b38f637f366cf7861b50cf9e8b89fa47);
+            
+        
+
+        circle_marker_9429244e4d8df46a56f760137933c9ea.bindPopup(popup_130ce4289cf3949bf6e920c339c6b662)
+        ;
+
+        
+    
+    
+            circle_marker_9429244e4d8df46a56f760137933c9ea.bindTooltip(
+                `<div>
+                     Santa Rosa
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_581fc42574b6225806d95e769eb06f27 = L.circleMarker(
+                [-29.6868, -53.8149],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.0018530332904829533, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_63dcf3a90f6b2bb15935e8de8ede6b55 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_42a1a8b256cdeb1edc046c40007d88bd = $(`<div id="html_42a1a8b256cdeb1edc046c40007d88bd" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$2800.0</div>`)[0];
+                popup_63dcf3a90f6b2bb15935e8de8ede6b55.setContent(html_42a1a8b256cdeb1edc046c40007d88bd);
+            
+        
+
+        circle_marker_581fc42574b6225806d95e769eb06f27.bindPopup(popup_63dcf3a90f6b2bb15935e8de8ede6b55)
+        ;
+
+        
+    
+    
+            circle_marker_581fc42574b6225806d95e769eb06f27.bindTooltip(
+                `<div>
+                     Santa Maria
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2bcdbd3c42110f71d7a6983de3932a66 = L.circleMarker(
+                [-30.0847, -51.6187],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.0015113471876699715, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_1e835317418a85f4e05f586bb1a7b64b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d7e6016b12edf32211a3f27843914969 = $(`<div id="html_d7e6016b12edf32211a3f27843914969" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$2283.7</div>`)[0];
+                popup_1e835317418a85f4e05f586bb1a7b64b.setContent(html_d7e6016b12edf32211a3f27843914969);
+            
+        
+
+        circle_marker_2bcdbd3c42110f71d7a6983de3932a66.bindPopup(popup_1e835317418a85f4e05f586bb1a7b64b)
+        ;
+
+        
+    
+    
+            circle_marker_2bcdbd3c42110f71d7a6983de3932a66.bindTooltip(
+                `<div>
+                     Eldorado do Sul
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f4e93d2598681360e36339154ea01302 = L.circleMarker(
+                [-29.0261, -51.1875],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.0015049277509136556, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_b21bf4108c2bbcfa926f517d19e968ff = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_239545f17db8ba9ea6a834fc3d08b4fb = $(`<div id="html_239545f17db8ba9ea6a834fc3d08b4fb" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$2274.0</div>`)[0];
+                popup_b21bf4108c2bbcfa926f517d19e968ff.setContent(html_239545f17db8ba9ea6a834fc3d08b4fb);
+            
+        
+
+        circle_marker_f4e93d2598681360e36339154ea01302.bindPopup(popup_b21bf4108c2bbcfa926f517d19e968ff)
+        ;
+
+        
+    
+    
+            circle_marker_f4e93d2598681360e36339154ea01302.bindTooltip(
+                `<div>
+                     Flores da Cunha
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0e71af8d70cb7e8ed3da3647f60a44af = L.circleMarker(
+                [-28.9817, -52.3445],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.0014601703789724548, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_a638ef7b84ae2ebd1bec547c4d1cd791 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2aaa8cd7a3c69f3835af2126ad4a2712 = $(`<div id="html_2aaa8cd7a3c69f3835af2126ad4a2712" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$2206.37</div>`)[0];
+                popup_a638ef7b84ae2ebd1bec547c4d1cd791.setContent(html_2aaa8cd7a3c69f3835af2126ad4a2712);
+            
+        
+
+        circle_marker_0e71af8d70cb7e8ed3da3647f60a44af.bindPopup(popup_a638ef7b84ae2ebd1bec547c4d1cd791)
+        ;
+
+        
+    
+    
+            circle_marker_0e71af8d70cb7e8ed3da3647f60a44af.bindTooltip(
+                `<div>
+                     Fontoura Xavier
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_54adffc7bc79e33647c70f5dde236a50 = L.circleMarker(
+                [-26.8246, -49.269],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.001236998991037933, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_8ee4a75bbaf9f9c1c05cb4c0921ca2be = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e21ac4bc7dc8d5fba516163434ebef71 = $(`<div id="html_e21ac4bc7dc8d5fba516163434ebef71" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$1869.15</div>`)[0];
+                popup_8ee4a75bbaf9f9c1c05cb4c0921ca2be.setContent(html_e21ac4bc7dc8d5fba516163434ebef71);
+            
+        
+
+        circle_marker_54adffc7bc79e33647c70f5dde236a50.bindPopup(popup_8ee4a75bbaf9f9c1c05cb4c0921ca2be)
+        ;
+
+        
+    
+    
+            circle_marker_54adffc7bc79e33647c70f5dde236a50.bindTooltip(
+                `<div>
+                     Timbó
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_03448deb490bf813932cf92b411d1d35 = L.circleMarker(
+                [-23.4205, -51.9333],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.001217707590888798, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_81183b20a062aa67ae1a5583d48850a6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f55c8b0f378c2310edfbedaab6981735 = $(`<div id="html_f55c8b0f378c2310edfbedaab6981735" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$1840.0</div>`)[0];
+                popup_81183b20a062aa67ae1a5583d48850a6.setContent(html_f55c8b0f378c2310edfbedaab6981735);
+            
+        
+
+        circle_marker_03448deb490bf813932cf92b411d1d35.bindPopup(popup_81183b20a062aa67ae1a5583d48850a6)
+        ;
+
+        
+    
+    
+            circle_marker_03448deb490bf813932cf92b411d1d35.bindTooltip(
+                `<div>
+                     Maringá
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0e777af33e30f96ba5254aee6c41d111 = L.circleMarker(
+                [-27.664, -53.6407],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.0011932012256221608, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_d3a9759d1150702a5f97d582ba44b1fd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_df22113212aee25cf007e7bff9ed0960 = $(`<div id="html_df22113212aee25cf007e7bff9ed0960" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$1802.97</div>`)[0];
+                popup_d3a9759d1150702a5f97d582ba44b1fd.setContent(html_df22113212aee25cf007e7bff9ed0960);
+            
+        
+
+        circle_marker_0e777af33e30f96ba5254aee6c41d111.bindPopup(popup_d3a9759d1150702a5f97d582ba44b1fd)
+        ;
+
+        
+    
+    
+            circle_marker_0e777af33e30f96ba5254aee6c41d111.bindTooltip(
+                `<div>
+                     Redentora
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4ffa795e420722b7ade4fc1e8becc182 = L.circleMarker(
+                [-27.3978, -52.2975],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.0008872058675790883, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_61a15b061ec5d1410195bd68e44bf668 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7a8f35335a9b45a86ce622b9ba8f7cfe = $(`<div id="html_7a8f35335a9b45a86ce622b9ba8f7cfe" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$1340.6</div>`)[0];
+                popup_61a15b061ec5d1410195bd68e44bf668.setContent(html_7a8f35335a9b45a86ce622b9ba8f7cfe);
+            
+        
+
+        circle_marker_4ffa795e420722b7ade4fc1e8becc182.bindPopup(popup_61a15b061ec5d1410195bd68e44bf668)
+        ;
+
+        
+    
+    
+            circle_marker_4ffa795e420722b7ade4fc1e8becc182.bindTooltip(
+                `<div>
+                     Aratiba
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b4efb3103c8b558aaad53a7abfdc7ba2 = L.circleMarker(
+                [-28.9312, -51.5516],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.0008702638489232441, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_0f377a20174f6c146b73a62fa5dd1826 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_321b225aa4819d0e891df20ee9705fda = $(`<div id="html_321b225aa4819d0e891df20ee9705fda" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$1315.0</div>`)[0];
+                popup_0f377a20174f6c146b73a62fa5dd1826.setContent(html_321b225aa4819d0e891df20ee9705fda);
+            
+        
+
+        circle_marker_b4efb3103c8b558aaad53a7abfdc7ba2.bindPopup(popup_0f377a20174f6c146b73a62fa5dd1826)
+        ;
+
+        
+    
+    
+            circle_marker_b4efb3103c8b558aaad53a7abfdc7ba2.bindTooltip(
+                `<div>
+                     Veranópolis
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3118703becae2b82572ff29e162c1ae9 = L.circleMarker(
+                [-25.0916, -50.1668],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.0008636458728858051, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_0b872f9653dd7b8b09f72fd6b4f5fddf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_18f5d27a8f059e4d9f58263391ae38d3 = $(`<div id="html_18f5d27a8f059e4d9f58263391ae38d3" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$1305.0</div>`)[0];
+                popup_0b872f9653dd7b8b09f72fd6b4f5fddf.setContent(html_18f5d27a8f059e4d9f58263391ae38d3);
+            
+        
+
+        circle_marker_3118703becae2b82572ff29e162c1ae9.bindPopup(popup_0b872f9653dd7b8b09f72fd6b4f5fddf)
+        ;
+
+        
+    
+    
+            circle_marker_3118703becae2b82572ff29e162c1ae9.bindTooltip(
+                `<div>
+                     Ponta Grossa
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d63443a1a389f41a9017dc6805d87989 = L.circleMarker(
+                [-29.5456, -51.4185],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.0005120460419687395, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_d0a583a3b0c73bcea7816ff3c2080801 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b29c6e263af8e331d8abd52207c76849 = $(`<div id="html_b29c6e263af8e331d8abd52207c76849" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$773.72</div>`)[0];
+                popup_d0a583a3b0c73bcea7816ff3c2080801.setContent(html_b29c6e263af8e331d8abd52207c76849);
+            
+        
+
+        circle_marker_d63443a1a389f41a9017dc6805d87989.bindPopup(popup_d0a583a3b0c73bcea7816ff3c2080801)
+        ;
+
+        
+    
+    
+            circle_marker_d63443a1a389f41a9017dc6805d87989.bindTooltip(
+                `<div>
+                     Harmonia
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_31acbdf60af724b77d9da4aa260987c1 = L.circleMarker(
+                [-27.2156, -49.643],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.00047649427469561656, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_67a03ac1549d0fa840be850522fd1456 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fabfb86a486a1a8fc482b1900dcf8455 = $(`<div id="html_fabfb86a486a1a8fc482b1900dcf8455" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$720.0</div>`)[0];
+                popup_67a03ac1549d0fa840be850522fd1456.setContent(html_fabfb86a486a1a8fc482b1900dcf8455);
+            
+        
+
+        circle_marker_31acbdf60af724b77d9da4aa260987c1.bindPopup(popup_67a03ac1549d0fa840be850522fd1456)
+        ;
+
+        
+    
+    
+            circle_marker_31acbdf60af724b77d9da4aa260987c1.bindTooltip(
+                `<div>
+                     Rio do Sul
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a83e0d20b57f210861767eae0695fbb3 = L.circleMarker(
+                [-27.7758, -52.8056],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.00039707856224634717, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_1f6b1f37ef2197615423a636fa9706f8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ee54c6eda524453e11ccb78ae6e4ea5c = $(`<div id="html_ee54c6eda524453e11ccb78ae6e4ea5c" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$600.0</div>`)[0];
+                popup_1f6b1f37ef2197615423a636fa9706f8.setContent(html_ee54c6eda524453e11ccb78ae6e4ea5c);
+            
+        
+
+        circle_marker_a83e0d20b57f210861767eae0695fbb3.bindPopup(popup_1f6b1f37ef2197615423a636fa9706f8)
+        ;
+
+        
+    
+    
+            circle_marker_a83e0d20b57f210861767eae0695fbb3.bindTooltip(
+                `<div>
+                     Ronda Alta
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f0dd6fb6d9fad8ed02fcea2b297a38da = L.circleMarker(
+                [-30.0819, -51.0194],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.00039707856224634717, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_82dd80bcc03c38fbf8e3963cbe0d5343 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f5a746ed1278c49c8f544b3047853e4a = $(`<div id="html_f5a746ed1278c49c8f544b3047853e4a" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$600.0</div>`)[0];
+                popup_82dd80bcc03c38fbf8e3963cbe0d5343.setContent(html_f5a746ed1278c49c8f544b3047853e4a);
+            
+        
+
+        circle_marker_f0dd6fb6d9fad8ed02fcea2b297a38da.bindPopup(popup_82dd80bcc03c38fbf8e3963cbe0d5343)
+        ;
+
+        
+    
+    
+            circle_marker_f0dd6fb6d9fad8ed02fcea2b297a38da.bindTooltip(
+                `<div>
+                     Viamão
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_15a7fe1511a336a251fde052cdc4f0f9 = L.circleMarker(
+                [-26.7242, -53.5163],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.0003420897993512655, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_7995aaaaf5d1f70da6685ba1a9840c82 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0c256cbd4c547aeaea15a02166ae5650 = $(`<div id="html_0c256cbd4c547aeaea15a02166ae5650" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$516.91</div>`)[0];
+                popup_7995aaaaf5d1f70da6685ba1a9840c82.setContent(html_0c256cbd4c547aeaea15a02166ae5650);
+            
+        
+
+        circle_marker_15a7fe1511a336a251fde052cdc4f0f9.bindPopup(popup_7995aaaaf5d1f70da6685ba1a9840c82)
+        ;
+
+        
+    
+    
+            circle_marker_15a7fe1511a336a251fde052cdc4f0f9.bindTooltip(
+                `<div>
+                     São Miguel do Oeste
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f041b2f9643dfd7a219e6cc815aeb02f = L.circleMarker(
+                [-22.4836, -47.211],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.0003176628497970777, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_ca0485518334728fec6fb50fe45c8aac = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7484b05245aad519c2b8c443a9d059d4 = $(`<div id="html_7484b05245aad519c2b8c443a9d059d4" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$480.0</div>`)[0];
+                popup_ca0485518334728fec6fb50fe45c8aac.setContent(html_7484b05245aad519c2b8c443a9d059d4);
+            
+        
+
+        circle_marker_f041b2f9643dfd7a219e6cc815aeb02f.bindPopup(popup_ca0485518334728fec6fb50fe45c8aac)
+        ;
+
+        
+    
+    
+            circle_marker_f041b2f9643dfd7a219e6cc815aeb02f.bindTooltip(
+                `<div>
+                     Engenheiro Coelho
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4cb1d5a9960d3914894bcc6b53086b7c = L.circleMarker(
+                [-23.5057, -46.879],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.00021722844545290164, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_7bd84eed042792527413b5d212ac1114 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b117eb36eda40264da8c449dea46f9c0 = $(`<div id="html_b117eb36eda40264da8c449dea46f9c0" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$328.24</div>`)[0];
+                popup_7bd84eed042792527413b5d212ac1114.setContent(html_b117eb36eda40264da8c449dea46f9c0);
+            
+        
+
+        circle_marker_4cb1d5a9960d3914894bcc6b53086b7c.bindPopup(popup_7bd84eed042792527413b5d212ac1114)
+        ;
+
+        
+    
+    
+            circle_marker_4cb1d5a9960d3914894bcc6b53086b7c.bindTooltip(
+                `<div>
+                     Barueri
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5030e1bdaf2a883bb767ad8483d8bb02 = L.circleMarker(
+                [-22.7858, -43.3049],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 0.00011924269224257805, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_87d5d787888a7b9d96e5bff30f30a0af = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_58b4bcc211708e641063d81a9c7a9513 = $(`<div id="html_58b4bcc211708e641063d81a9c7a9513" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$180.18</div>`)[0];
+                popup_87d5d787888a7b9d96e5bff30f30a0af.setContent(html_58b4bcc211708e641063d81a9c7a9513);
+            
+        
+
+        circle_marker_5030e1bdaf2a883bb767ad8483d8bb02.bindPopup(popup_87d5d787888a7b9d96e5bff30f30a0af)
+        ;
+
+        
+    
+    
+            circle_marker_5030e1bdaf2a883bb767ad8483d8bb02.bindTooltip(
+                `<div>
+                     Duque de Caxias
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_efba63fa092b8323a7e1d22c09735cf3 = L.circleMarker(
+                [-27.4002, -51.2276],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 6.9733613506496e-05, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_740ce56e880d79bcc60ff5e0c4433d2d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4109b3d1b926c0c6f81dded061ca715c = $(`<div id="html_4109b3d1b926c0c6f81dded061ca715c" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$105.37</div>`)[0];
+                popup_740ce56e880d79bcc60ff5e0c4433d2d.setContent(html_4109b3d1b926c0c6f81dded061ca715c);
+            
+        
+
+        circle_marker_efba63fa092b8323a7e1d22c09735cf3.bindPopup(popup_740ce56e880d79bcc60ff5e0c4433d2d)
+        ;
+
+        
+    
+    
+            circle_marker_efba63fa092b8323a7e1d22c09735cf3.bindTooltip(
+                `<div>
+                     Campos Novos
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_97b6782a90244584f5f5616b4341cb02 = L.circleMarker(
+                [-27.5945, -48.5477],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8710A", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 5.0064988723226935e-05, "stroke": true, "weight": 5}
+            ).addTo(map_a6edfe0416e1c63cb7c5c48558b0c61b);
+        
+    
+        var popup_18f43a0caddcc15ee8dd72996e473975 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4f0f2b753bbdf3c6df4398090c56728e = $(`<div id="html_4f0f2b753bbdf3c6df4398090c56728e" style="width: 100.0%; height: 100.0%;">Valor Empenhado R$75.65</div>`)[0];
+                popup_18f43a0caddcc15ee8dd72996e473975.setContent(html_4f0f2b753bbdf3c6df4398090c56728e);
+            
+        
+
+        circle_marker_97b6782a90244584f5f5616b4341cb02.bindPopup(popup_18f43a0caddcc15ee8dd72996e473975)
+        ;
+
+        
+    
+    
+            circle_marker_97b6782a90244584f5f5616b4341cb02.bindTooltip(
+                `<div>
+                     Florianópolis
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
