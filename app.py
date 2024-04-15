@@ -16,7 +16,7 @@ import time
 
 
 theme = st_theme()
-time.sleep(2)
+time.sleep(3)
 
 
 
