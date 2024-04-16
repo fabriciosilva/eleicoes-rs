@@ -51,8 +51,8 @@ Antes de qualquer coisa, quero dizer que aqui tem ZERO INFLUÊNCIA POLÍTICA. O 
 
 
 
-df = pd.read_excel('data/dados_agrupados-q1.xlsx')
-df_completo = pd.read_csv('data/despesas_fornecedor_com_municipios_Q1.csv')
+df = pd.read_csv('https://raw.githubusercontent.com/fabriciosilva/serafina-em-dados/main/data/notebooks/clean_files/dados_agrupados-q1.csv')
+df_completo = pd.read_csv('https://raw.githubusercontent.com/fabriciosilva/serafina-em-dados/main/data/notebooks/clean_files/despesas_fornecedor_com_municipios_Q1.csv')
 
 df_completo = df_completo[~df_completo['Código'].isna()]
 df_completo = df_completo[~df_completo['CNPJ/CPF'].isna()]
@@ -196,15 +196,21 @@ st_data = st_folium(mapa, width=600, height=600)
 
 
 
-df_dados_agrupados = pd.read_excel('data/dados_agrupados-q1.xlsx').sort_values(by='valor_empenhado', ascending=False)[:10]
+df_dados_agrupados = pd.read_csv('https://raw.githubusercontent.com/fabriciosilva/serafina-em-dados/main/data/notebooks/clean_files/dados_agrupados-q1.csv').sort_values(by='valor_empenhado', ascending=False)[:10]
 
 
 df_empresas = df_completo.sort_values(by= 'valor_empenhado', ascending=False)[0:10].sort_values(by= 'valor_empenhado', ascending=True)
 
 
 
-df_empresas = df_empresas[~df_empresas['Código'].isna()]
-df_empresas = df_empresas[~df_empresas['CNPJ/CPF'].isna()]
+df_empresas =  df_completo.groupby(['Código', 'Descrição', 'cnpj', 'municipio', 'uf', 'CNPJ/CPF']).agg(
+    {'valor_empenhado': 'sum', 'valor_liquidado': 'sum', 'valor_pago': 'sum'}
+    ).sort_values(by='valor_empenhado', ascending=False)
+
+df_empresas.reset_index(inplace=True)
+
+df_empresas = df_empresas[:10].sort_values(by='valor_empenhado', ascending=True)
+
 
 
 """
@@ -228,7 +234,7 @@ st.plotly_chart(empresas, use_container_width=True)
 
 
 
-dados_agrupados_meses = pd.read_csv('data/dados_agrupados_meses.csv')
+dados_agrupados_meses = pd.read_csv('https://raw.githubusercontent.com/fabriciosilva/serafina-em-dados/main/data/notebooks/clean_files/dados_agrupados_meses.csv')
 
 
 fig_meses = go.Figure()
