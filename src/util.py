@@ -30,6 +30,7 @@ def bar_chart(x_value, y_value, title, xaxis_title, yaxis_title):
         yaxis_showgrid=True,
         titlefont=dict(size=18),  # Ajuste o tamanho do título
         margin=dict(t=80),
+        dragmode='pan',
     #    titlepad=20,  # Ajuste o espaçamento entre o título e o gráfico
     #    title_x=0.5,  # Centraliza o título horizontalmente
         # Adiciona subtítulo

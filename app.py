@@ -14,33 +14,27 @@ from streamlit_theme import st_theme
 import time
 
 
+# Configuração inicial
+
+st.set_page_config(
+     page_title='Serafina em Dados',
+     layout="wide",
+     initial_sidebar_state="expanded",
+)
 
 theme = st_theme()
 time.sleep(3)
 
 
 
+st.title('Serafina em dados')
+
+
 """
-
-# _VERSAO DE TESTE_
-_Os dados ainda serão revisados_
-
-# Serafina em dados 
-# 🏰⛪🎲
+#### Acompanhe alguns números apurados de Despesas por Fornecedor no **primeiro trimestre de 2024**!
 
 
-
-
-
-Todo mundo sabe que as entidades públicas são obrigadas por [lei](https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2011/Lei/L12527.htm) a disponibilizar seus dados na internet. Aqui em Serafina não é diferente e a Prefeitura os disponibliza em sei site. E tá tudo certo!
-
-Só que, gente, é um monte de planilhazinha que dá uma tristeza só de olhar. Aí, pra deixar isso mais fácil, resolvi dar uma  compilada nos dados e vou mostrar tudo bonitinho em gráficos e números, pra gente entender direitinho como o dinheiro da cidade tá sendo usado. 
-
-Acredito que isso vai nos ajudar a fiscalizar e cobrar mais responsabilidade da galera que tá cuidando do nosso dinheiro.
-
-Antes de qualquer coisa, quero dizer que aqui tem ZERO INFLUÊNCIA POLÍTICA. O objetivo da página é apenas dar luz aos gastos da prefeitura para que cada cidadão tire suas próprias conclusões!
-
-🟢⚪🔴
+###### 🟢⚪🔴
 
  
 
@@ -48,6 +42,8 @@ Antes de qualquer coisa, quero dizer que aqui tem ZERO INFLUÊNCIA POLÍTICA. O 
 """
 
 
+#with st.expander("Show past quarters"):
+#    "Teste"
 
 
 
@@ -276,3 +272,45 @@ fig_meses.update_layout(title="Comparativo de valores empenhado e liquidado 2024
 
 
 st.plotly_chart(fig_meses, use_container_width=True)
+
+
+
+
+
+
+st.sidebar.image("src/imgs/sd.png")
+
+st.sidebar.header('Serafina em Dados')
+
+
+st.sidebar.markdown('''
+<small>🏰⛪🎲 <br> Todo mundo sabe que as entidades públicas são obrigadas por lei a disponibilizar seus dados na internet. Aqui em Serafina não é diferente e a Prefeitura os disponibliza em sei site. E tá tudo certo!</small>
+    ''', unsafe_allow_html=True)
+
+st.sidebar.markdown('''
+<small>Só que, gente, é um monte de planilhazinha que dá uma tristeza só de olhar. Aí, pra deixar isso mais fácil, resolvi dar uma compilada nos dados e vou mostrar tudo bonitinho em gráficos e números, pra gente entender como o dinheiro da cidade tá sendo usado.</small>
+    ''', unsafe_allow_html=True)
+
+
+st.sidebar.markdown('''
+<small>Acredito que isso vai nos ajudar a fiscalizar e cobrar mais responsabilidade da galera que tá cuidando do nosso dinheiro.</small>
+    ''', unsafe_allow_html=True)
+
+
+st.sidebar.markdown('''
+<small>Antes de qualquer coisa, quero dizer que aqui tem ZERO INFLUÊNCIA POLÍTICA. O objetivo da página é apenas dar luz aos gastos da prefeitura para que cada cidadão tire suas próprias conclusões!</small>
+    ''', unsafe_allow_html=True)
+
+
+
+
+
+
+
+st.sidebar.markdown('<small>Este projeto é uma iniciativa individual. A única fonte de dados é o [Portal de Transparência](https://sistemas.serafinacorrea.rs.gov.br/transparencia/) do Município de Serafina Correa/RS. ', unsafe_allow_html=True)
+
+st.sidebar.markdown('''<hr>''', unsafe_allow_html=True)
+st.sidebar.markdown('''<small>[Serafina em Dados v0.1](https://github.com/fabriciosilva/serafina-em-dados)  | 2024 | [Fabrício Silva](https://www.linkedin.com/in/fabriciofsilva/)</small>''', unsafe_allow_html=True)
+
+
+
