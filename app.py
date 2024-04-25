@@ -25,6 +25,11 @@ st.set_page_config(
 theme = st_theme()
 time.sleep(3)
 
+@st.cache_data
+def load_data(url):
+    df = pd.read_csv(url)
+    return df
+
 
 
 st.title('Serafina em dados')
@@ -47,8 +52,8 @@ st.title('Serafina em dados')
 
 
 
-df = pd.read_csv('https://raw.githubusercontent.com/fabriciosilva/serafina-em-dados/main/data/notebooks/clean_files/dados_agrupados-q1.csv')
-df_completo = pd.read_csv('https://raw.githubusercontent.com/fabriciosilva/serafina-em-dados/main/data/notebooks/clean_files/despesas_fornecedor_com_municipios_Q1.csv')
+df = load_data('https://raw.githubusercontent.com/fabriciosilva/serafina-em-dados/main/data/notebooks/clean_files/dados_agrupados-q1.csv')
+df_completo = load_data('https://raw.githubusercontent.com/fabriciosilva/serafina-em-dados/main/data/notebooks/clean_files/despesas_fornecedor_com_municipios_Q1.csv')
 
 df_completo = df_completo[~df_completo['Código'].isna()]
 df_completo = df_completo[~df_completo['CNPJ/CPF'].isna()]
@@ -73,7 +78,7 @@ Totais apurados no **primeiro trimestre de 2024**:
 
 
 background_color = '#fff'
-if theme['base'] == 'dark':
+if theme is not None and theme['base'] == 'dark':
     background_color = '#02060c'
 style_metric_cards(background_color=background_color)
 col_estados, col_cidades, col_empresas = st.columns(3)
@@ -153,51 +158,55 @@ Navegue no mapa abaixo para buscar mais detalhes. Ao clicar no município, o val
 Tenta aí :)
 """
 
+@st.cache_data
+def get_min(data_frame, column):
+    return data_frame[column].min()
 
-mapa = folium.Map(location=(-23.2527698,-50.4279182), zoom_start=5,  tiles='cartodbdark_matter')
+@st.cache_data
+def get_max(data_frame, column):
+    return data_frame[column].max()
+
+
 
 #mapa
-valor_empenhado_min = df['valor_empenhado'].min()
-valor_empenhado_max = df['valor_empenhado'].max()
+valor_empenhado_min = get_min(df, 'valor_empenhado')
+valor_empenhado_max = get_max(df, 'valor_empenhado')
 
-print(valor_empenhado_max, valor_empenhado_min)
-
-for index, a in df.iterrows():    
-    municipio = a['municipio']
-    latitude = a['latitude']
-    longitude = a['longitude']
-    valor_empenhado = a['valor_empenhado']
+@st.cache_data
+def load_map():
+    mapa = folium.Map(location=(-23.2527698,-50.4279182), zoom_start=5,  tiles='cartodbdark_matter')
+    for index, a in df.iterrows():            
+        latitude = a['latitude']
+        longitude = a['longitude']
+        valor_empenhado = a['valor_empenhado']
         
-    
-    radius = valor_empenhado / valor_empenhado_max 
-    popup_valor = util.brl(valor_empenhado)
-    if not math.isnan(latitude) and not math.isnan(longitude) and valor_empenhado > 0:
-        folium.CircleMarker(
-          location=[latitude, longitude],
-          radius=radius*10,
-          color="red",
-          weight=5,
-          fill_opacity=0.6,
-          opacity=1,
-          fill_color="#E8710A",
-          fill=False,  # gets overridden by fill_color
-          popup = f'Valor Empenhado {popup_valor}',
-          tooltip=municipio,
-          zoom_control=False,
-          scrollWheelZoom=False,
-        ).add_to(mapa)
+        radius = valor_empenhado / valor_empenhado_max 
+        popup_valor = util.brl(valor_empenhado)
+        municipio =  f"{a['municipio']} - Valor Empenhado {popup_valor}"
+
+        if not math.isnan(latitude) and not math.isnan(longitude) and valor_empenhado > 0:
+            folium.CircleMarker(
+            location=[latitude, longitude],
+            radius=radius*10,
+            color="red",
+            weight=5,
+            fill_opacity=0.6,
+            opacity=1,
+            fill_color="#E8710A",
+            fill=False,  # gets overridden by fill_color
+            popup = f'Valor Empenhado {popup_valor}',
+            tooltip=municipio,
+            zoom_control=False,
+            scrollWheelZoom=False,
+            ).add_to(mapa)
+    return mapa
 
 
-st_data = st_folium(mapa, width=600, height=600)
+st_data = st_folium(load_map(), width=600, height=600)
 
 
-
-df_dados_agrupados = pd.read_csv('https://raw.githubusercontent.com/fabriciosilva/serafina-em-dados/main/data/notebooks/clean_files/dados_agrupados-q1.csv').sort_values(by='valor_empenhado', ascending=False)[:10]
-
-
+df_dados_agrupados = load_data('https://raw.githubusercontent.com/fabriciosilva/serafina-em-dados/main/data/notebooks/clean_files/dados_agrupados-q1.csv').sort_values(by='valor_empenhado', ascending=False)[:10]
 df_empresas = df_completo.sort_values(by= 'valor_empenhado', ascending=False)[0:10].sort_values(by= 'valor_empenhado', ascending=True)
-
-
 
 df_empresas =  df_completo.groupby(['Código', 'Descrição', 'cnpj', 'municipio', 'uf', 'CNPJ/CPF']).agg(
     {'valor_empenhado': 'sum', 'valor_liquidado': 'sum', 'valor_pago': 'sum'}
@@ -230,7 +239,7 @@ st.plotly_chart(empresas, use_container_width=True)
 
 
 
-dados_agrupados_meses = pd.read_csv('https://raw.githubusercontent.com/fabriciosilva/serafina-em-dados/main/data/notebooks/clean_files/dados_agrupados_meses.csv')
+dados_agrupados_meses = load_data('https://raw.githubusercontent.com/fabriciosilva/serafina-em-dados/main/data/notebooks/clean_files/dados_agrupados_meses.csv')
 
 
 fig_meses = go.Figure()
@@ -276,9 +285,7 @@ st.plotly_chart(fig_meses, use_container_width=True)
 
 
 
-
-
-st.sidebar.image("src/imgs/sd.png")
+st.sidebar.image("src/imgs/sd.png", width=150)
 
 st.sidebar.header('Serafina em Dados')
 
