@@ -106,6 +106,9 @@ col_qtde.metric("Quantidade de empenhos",  df_completo.valor_empenhado.count())
 
 col_max, col_min, col_media = st.columns(3)
 
+print(df_completo.valor_empenhado.min())
+
+
 col_max.metric("Maior valor de empenho (R$)", util.moeda(df_completo.valor_empenhado.max()), help=util.brl(df_completo.valor_empenhado.max()))
 col_min.metric("Menor valor de empenho (R$)", util.moeda(df_completo.valor_empenhado.min()), help=util.brl(df_completo.valor_empenhado.min()))
 col_media.metric("Valor médio de empenho (R$)", util.moeda(df_completo.valor_empenhado.mean()), help=util.brl(df_completo.valor_empenhado.mean()))
