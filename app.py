@@ -30,6 +30,11 @@ def load_data(url):
     df = pd.read_csv(url)
     return df
 
+background_color = '#fff'
+logo_dark = False
+if theme is not None and theme['base'] == 'dark':
+    background_color = '#02060c'
+    logo_dark = True
 
 
 st.title('Serafina em dados')
@@ -77,9 +82,7 @@ Totais apurados no **primeiro trimestre de 2024**:
 
 
 
-background_color = '#fff'
-if theme is not None and theme['base'] == 'dark':
-    background_color = '#02060c'
+
 style_metric_cards(background_color=background_color)
 col_estados, col_cidades, col_empresas = st.columns(3)
 col_estados.metric("🔰 Estados", df.uf.unique().size)
@@ -94,7 +97,7 @@ st.markdown("")
 """
 
 ###  👀 E o total, dá quanto? 
-
+Os número abaixo consideram apenas dados de pessoas jurídicas com valor de empenho maior que zero. 
 """
 st.markdown("")
 
@@ -106,15 +109,12 @@ col_qtde.metric("Quantidade de empenhos",  df_completo.valor_empenhado.count())
 
 col_max, col_min, col_media = st.columns(3)
 
-print(df_completo.valor_empenhado.min())
-
 
 col_max.metric("Maior valor de empenho (R$)", util.moeda(df_completo.valor_empenhado.max()), help=util.brl(df_completo.valor_empenhado.max()))
 col_min.metric("Menor valor de empenho (R$)", util.moeda(df_completo.valor_empenhado.min()), help=util.brl(df_completo.valor_empenhado.min()))
 col_media.metric("Valor médio de empenho (R$)", util.moeda(df_completo.valor_empenhado.mean()), help=util.brl(df_completo.valor_empenhado.mean()))
 
-  
-
+st.warning('Despesas com pessoas físicas, folha de pagamento e empenhos cancelados não fazem parte desta análise. \n\rEsses dados serão analisados e publicados futuramente.', icon="⚠️")
 
 """
 ---
@@ -287,8 +287,9 @@ st.plotly_chart(fig_meses, use_container_width=True)
 
 
 
+logo_image =  "src/imgs/sd-bg-dark.png" if logo_dark else "src/imgs/sd.png"
 
-st.sidebar.image("src/imgs/sd.png", width=150)
+st.sidebar.image(logo_image, width=150)
 
 st.sidebar.header('Serafina em Dados')
 
