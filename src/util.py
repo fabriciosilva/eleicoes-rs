@@ -11,11 +11,15 @@ def brl(valor):
     return format_currency(valor, 'BRL', locale='pt_BR')
 
 
-def bar_chart(x_value, y_value, title, xaxis_title, yaxis_title):
+def bar_chart(x_value, y_value, title, xaxis_title, yaxis_title, currence_format=True):
+    
+    if currence_format:
+        x_value = x_value.apply(lambda x: brl(x))
+    
     fig = go.Figure(data=[go.Bar(
     x=x_value, 
     y=y_value, 
-    text=x_value.apply(lambda x: brl(x)),
+    text=x_value,
     orientation='h',
    # marker=dict(color='skyblue')  # Definindo a cor das barras
     )])

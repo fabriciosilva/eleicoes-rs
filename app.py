@@ -17,7 +17,7 @@ import time
 # Configuração inicial
 
 st.set_page_config(
-     page_title='Serafina em Dados',
+     page_title='Eleições 2024',
      layout="wide",
      initial_sidebar_state="expanded",
 )
@@ -26,8 +26,8 @@ theme = st_theme()
 time.sleep(3)
 
 @st.cache_data
-def load_data(url):
-    df = pd.read_csv(url)
+def load_data(url, sep=',', encoding='latin1'):
+    df = pd.read_csv(url, sep=sep, encoding=encoding)    
     return df
 
 background_color = '#fff'
@@ -36,12 +36,20 @@ if theme is not None and theme['base'] == 'dark':
     background_color = '#02060c'
     logo_dark = True
 
+cidade = st.selectbox(
+    "Trocar Cidade",
+    ("PARAÍ", "CASCA", "NOVA ARAÇÁ", "SERAFINA CORREA", "NOVA BASSANO", "NOVA PRATA", "CANGUÇU", 'PELOTAS', 'PASSO FUNDO', 'PORTO ALEGRE'),
+    index=0
+)
 
-st.title('Serafina em dados')
+
+
+st.write("# Eleições 2024 - ", cidade)
+
 
 
 """
-#### Acompanhe alguns números apurados de Despesas por Fornecedor no **primeiro trimestre de 2024**!
+#### Acompanhe os dados divulgados pelo TSE sobre os candidatos e candidatas a prefeito e vereadores na região.
 
 
 ###### 🟢⚪🔴
@@ -57,109 +65,123 @@ st.title('Serafina em dados')
 
 
 
-df = load_data('https://raw.githubusercontent.com/fabriciosilva/serafina-em-dados/main/data/notebooks/clean_files/dados_agrupados-q1.csv')
-df_completo = load_data('https://raw.githubusercontent.com/fabriciosilva/serafina-em-dados/main/data/notebooks/clean_files/despesas_fornecedor_com_municipios_Q1.csv')
-
-df_completo = df_completo[~df_completo['Código'].isna()]
-df_completo = df_completo[~df_completo['CNPJ/CPF'].isna()]
+df = load_data('data/consulta_cand_2024_RS.csv', sep=';')
 
 
+"""
+Estes são os dados de candidatos disponibilizados pelo TSE. Mas só a tabela, assim, não diz muito, vamos analisar mais a fundo!
+"""
 
-valor_empenhado = df.valor_empenhado.sum()
-valor_liquidado = df.valor_liquidado.sum()
-valor_pago = df.valor_pago.sum()
-
+df = df[(df['NM_UE'] == cidade ) & (df['DS_CARGO'] != 'VICE-PREFEITO')]
 
 
 
 """
----
+###  Número de Candidatos 
 
-### 💸 Para onde foi o seu dinheiro? 
-
-Totais apurados no **primeiro trimestre de 2024**: 
-"""
-
-
-
-
-style_metric_cards(background_color=background_color)
-col_estados, col_cidades, col_empresas = st.columns(3)
-col_estados.metric("🔰 Estados", df.uf.unique().size)
-col_cidades.metric("🏙 Cidades", df.municipio.unique().size)
-col_empresas.metric("🏦 Empresas", df.cnpj.sum())
-
-
-
-st.markdown("")
-st.markdown("")
-
-"""
-
-###  👀 E o total, dá quanto? 
-Os número abaixo consideram apenas dados de pessoas jurídicas com valor de empenho maior que zero. 
 """
 st.markdown("")
 
-col1, col2, col3, col_qtde = st.columns(4)
-col1.metric("Valor empenhado (R$)", millify(valor_empenhado), help=util.brl(valor_empenhado))
-col2.metric("Valor liquidado (R$)", millify(valor_liquidado), help=util.brl(valor_liquidado))
-col3.metric("Valor pago (R$)", millify(valor_pago), help=util.brl(valor_pago))
-col_qtde.metric("Quantidade de empenhos",  df_completo.valor_empenhado.count())
-
-col_max, col_min, col_media = st.columns(3)
+pref, ver, partidos = st.columns(3)
+pref.metric("Candidatos a Prefeito(a)", df[df.DS_CARGO == 'PREFEITO'].shape[0], help=f"Candidatos a prefeito em {cidade}")
+ver.metric("Candidatos a Vereador(a)", df[df.DS_CARGO == 'VEREADOR'].shape[0], help=f"Candidatos a vereadores em {cidade}")
+partidos.metric("Qtde Partidos)", len(df['SG_PARTIDO'].unique()), help=f"Número de partidos políticos concorrendo em {cidade}")
 
 
-col_max.metric("Maior valor de empenho (R$)", util.moeda(df_completo.valor_empenhado.max()), help=util.brl(df_completo.valor_empenhado.max()))
-col_min.metric("Menor valor de empenho (R$)", util.moeda(df_completo.valor_empenhado.min()), help=util.brl(df_completo.valor_empenhado.min()))
-col_media.metric("Valor médio de empenho (R$)", util.moeda(df_completo.valor_empenhado.mean()), help=util.brl(df_completo.valor_empenhado.mean()))
+# Cria um dicionário para mapear o tipo de candidato ao cargo correspondente
+cargo_map = {
+    "Prefeito(a)": "PREFEITO",
+    "Vereador(a)": "VEREADOR"
+}
 
-st.warning('Despesas com pessoas físicas, folha de pagamento e empenhos cancelados não fazem parte desta análise. \n\rEsses dados serão analisados e publicados futuramente.', icon="⚠️")
+# Obtem o tipo de candidato selecionado pelo usuário
+tipo_candidato = st.radio(
+    "Você deseja ver dados de candidatos a:",
+    ["Todos", "Prefeito(a)", "Vereador(a)"],    
+    index=0,
+    horizontal=True
+)
 
-"""
----
-
-### Análise das empresas que possuem algum valor empenhado em Serafina Corrêa de janeiro à março de 2024
-"""
-
-
-df_top = df[0:10].sort_values(by="valor_empenhado", ascending=True)
-
-
-# Gráfico das cidades maiores empenhos
-empresas = util.bar_chart(
-    title='De onde são as empresas que mais tiveram valores empenhos em 2024T1?',
-    x_value=df_top["valor_empenhado"],
-    y_value=df_top["municipio"] +'/'+df_top["uf"],
-    xaxis_title="Valor Empenhado (R$)",
-    yaxis_title="Cidade"
-    )
-st.plotly_chart(empresas, use_container_width=True)
+# Filtra o DataFrame com base na seleção do usuário
+if tipo_candidato == "Todos":
+    df = df[(df['NM_UE'] == cidade) & (df['DS_CARGO'] != 'VICE-PREFEITO')]
+else:
+    cargo = cargo_map[tipo_candidato]
+    df = df[(df['NM_UE'] == cidade) & (df['DS_CARGO'] == cargo)]
 
 
 
 
-df_tail = df.tail(10).sort_values(by="valor_empenhado", ascending=True)
-# Gráfico das cidades menores empenhos
-empresas = util.bar_chart(
-    title='E o contrário? Quais as cidades que menos tiveram empenhos em 2024T1?',
-    x_value=df_tail["valor_empenhado"],
-    y_value=df_tail["municipio"]+'/'+df_tail["uf"],
-    xaxis_title="Valor Empenhado (R$)",
-    yaxis_title="Cidade"
-    )
-st.plotly_chart(empresas, use_container_width=True)
+col1, col2 = st.columns(2)
+
+with col1:
+    
+    df_partidos = df.groupby(['SG_PARTIDO']).agg({'DS_CARGO': 'count'}).sort_values(by='DS_CARGO', ascending=True).reset_index()
+    partidos = util.bar_chart(
+        title='Candidatos por Partido',
+        x_value=df_partidos["DS_CARGO"],
+        y_value=df_partidos["SG_PARTIDO"],
+        xaxis_title="Quantidade de Candidatos (Exceto candidatos a vice-prefeito)",
+        yaxis_title="Partido",
+        currence_format=False
+        )
+    st.plotly_chart(partidos, use_container_width=True)
+    
 
 
-"""
+with col2:
+    df_grau_instrucao = df.groupby(['DS_GRAU_INSTRUCAO']).agg({'DS_CARGO': 'count'}).sort_values(by='DS_CARGO', ascending=True).reset_index()
+    partidos = util.bar_chart(
+        title='Candidatos por Grau de Instrução',
+        x_value=df_grau_instrucao["DS_CARGO"],
+        y_value=df_grau_instrucao["DS_GRAU_INSTRUCAO"],
+        xaxis_title="Quantidade de Candidatos (Exceto candidatos a vice-prefeito)",
+        yaxis_title="Grau de Instrução",
+        currence_format=False
+        )
+    st.plotly_chart(partidos, use_container_width=True)
 
-### E eu consigo ver todas as cidades? 
-### _Tá na mão!_
 
-Navegue no mapa abaixo para buscar mais detalhes. Ao clicar no município, o valor emepenhado é exibido. 
+col3, col4, col5 = st.columns(3)
+with col3:
+    df_genero = df.groupby(['DS_GENERO']).agg({'DS_CARGO': 'count'}).sort_values(by='DS_CARGO', ascending=True).reset_index()
+    partidos = util.bar_chart(
+        title='Candidatos por Gênero',
+        x_value=df_genero["DS_CARGO"],
+        y_value=df_genero["DS_GENERO"],
+        xaxis_title="Quantidade de Candidatos (Exceto candidatos a vice-prefeito)",
+        yaxis_title="Gênero",
+        currence_format=False
+        )
+    st.plotly_chart(partidos, use_container_width=True)
 
-Tenta aí :)
-"""
+with col4:
+    df_raca = df.groupby(['DS_COR_RACA']).agg({'DS_CARGO': 'count'}).sort_values(by='DS_CARGO', ascending=True).reset_index()
+    partidos = util.bar_chart(
+        title='Candidatos por Cor/Raça',
+        x_value=df_raca["DS_CARGO"],
+        y_value=df_raca["DS_COR_RACA"],
+        xaxis_title="Quantidade de Candidatos (Exceto candidatos a vice-prefeito)",
+        yaxis_title="Cor/Raça",
+        currence_format=False
+        )
+    st.plotly_chart(partidos, use_container_width=True)
+
+
+
+with col5:
+    df_estado_civil = df.groupby(['DS_ESTADO_CIVIL']).agg({'DS_CARGO': 'count'}).sort_values(by='DS_CARGO', ascending=True).reset_index()
+    partidos = util.bar_chart(
+        title='Candidatos por Estado Civil',
+        x_value=df_estado_civil["DS_CARGO"],
+        y_value=df_estado_civil["DS_ESTADO_CIVIL"],
+        xaxis_title="Quantidade de Candidatos (Exceto candidatos a vice-prefeito)",
+        yaxis_title="Estado Civil",
+        currence_format=False
+        )
+    st.plotly_chart(partidos, use_container_width=True)
+
+
 
 @st.cache_data
 def get_min(data_frame, column):
@@ -171,145 +193,27 @@ def get_max(data_frame, column):
 
 
 
-#mapa
-valor_empenhado_min = get_min(df, 'valor_empenhado')
-valor_empenhado_max = get_max(df, 'valor_empenhado')
 
-@st.cache_data
-def load_map():
-    mapa = folium.Map(location=(-23.2527698,-50.4279182), zoom_start=5,  tiles='cartodbdark_matter')
-    for index, a in df.iterrows():            
-        latitude = a['latitude']
-        longitude = a['longitude']
-        valor_empenhado = a['valor_empenhado']
-        
-        radius = valor_empenhado / valor_empenhado_max 
-        popup_valor = util.brl(valor_empenhado)
-        municipio =  f"{a['municipio']} - Valor Empenhado {popup_valor}"
-
-        if not math.isnan(latitude) and not math.isnan(longitude) and valor_empenhado > 0:
-            folium.CircleMarker(
-            location=[latitude, longitude],
-            radius=radius*10,
-            color="red",
-            weight=5,
-            fill_opacity=0.6,
-            opacity=1,
-            fill_color="#E8710A",
-            fill=False,  # gets overridden by fill_color
-            popup = f'Valor Empenhado {popup_valor}',
-            tooltip=municipio,
-            zoom_control=False,
-            scrollWheelZoom=False,
-            ).add_to(mapa)
-    return mapa
-
-
-st_data = st_folium(load_map(), width=600, height=600)
-
-
-df_dados_agrupados = load_data('https://raw.githubusercontent.com/fabriciosilva/serafina-em-dados/main/data/notebooks/clean_files/dados_agrupados-q1.csv').sort_values(by='valor_empenhado', ascending=False)[:10]
-df_empresas = df_completo.sort_values(by= 'valor_empenhado', ascending=False)[0:10].sort_values(by= 'valor_empenhado', ascending=True)
-
-df_empresas =  df_completo.groupby(['Código', 'Descrição', 'cnpj', 'municipio', 'uf', 'CNPJ/CPF']).agg(
-    {'valor_empenhado': 'sum', 'valor_liquidado': 'sum', 'valor_pago': 'sum'}
-    ).sort_values(by='valor_empenhado', ascending=False)
-
-df_empresas.reset_index(inplace=True)
-
-df_empresas = df_empresas[:10].sort_values(by='valor_empenhado', ascending=True)
-
-
-
-"""
-
-### E as empresas, quais são? 
-
-Veja abaixo as top 10 empresas em valor de empenho entre janeiro e março de 2024
-
-"""
-
-# Gráfico das empresas
-empresas = util.bar_chart(
-    title='Empresas com maiores empenhos em Serafina',
-    x_value=df_empresas["valor_empenhado"],
-    y_value=df_empresas["Descrição"] + ' <br />' + df_empresas["municipio"] + '/' + df_empresas["uf"] + ' - ' + df_empresas["CNPJ/CPF"],
-    xaxis_title="Valor Empenhado (R$)",
-    yaxis_title="Empresa"
-    )
-st.plotly_chart(empresas, use_container_width=True)
-
-
-
-
-dados_agrupados_meses = load_data('https://raw.githubusercontent.com/fabriciosilva/serafina-em-dados/main/data/notebooks/clean_files/dados_agrupados_meses.csv')
-
-
-fig_meses = go.Figure()
-fig_meses.add_trace(go.Bar(
-    x=dados_agrupados_meses['mes'],
-    y=dados_agrupados_meses['valor_empenhado'],
-    name='Valor empenhado',
-    #marker_color='indianred',   
-    text=dados_agrupados_meses['valor_empenhado'].apply(lambda x: util.moeda(x))
-))
-fig_meses.add_trace(go.Bar(
-    x=dados_agrupados_meses['mes'],
-    y=dados_agrupados_meses['valor_liquidado'],
-    name='Valor Liquidado',
-    #marker_color='lightsalmon',
-    text=dados_agrupados_meses['valor_liquidado'].apply(lambda x: util.moeda(x))
-))
-
-fig_meses.add_trace(go.Bar(
-    x=dados_agrupados_meses['mes'],
-    y=dados_agrupados_meses['valor_pago'],
-    name='Valor pago',
-    #marker_color='green',
-    text=dados_agrupados_meses['valor_pago'].apply(lambda x: util.moeda(x))
-))
-
-# Here we modify the tickangle of the xaxis, resulting in rotated labels.
-#fig_meses.update_layout(barmode='group', xaxis_tickangle=0)
-
-fig_meses.update_layout(title="Comparativo de valores empenhado e liquidado 2024T1",
-                  xaxis_title="Mês",
-                  yaxis_title="Valor",
-                  bargap=0.2,
-                  barmode='group',
-                  xaxis_showgrid=True,
-                  yaxis_showgrid=True
-                  )
-
-
-
-st.plotly_chart(fig_meses, use_container_width=True)
-
-
-
-logo_image =  "src/imgs/sd-bg-dark.png" if logo_dark else "src/imgs/sd.png"
+logo_image =  "src/imgs/eleicoes.png"
 
 st.sidebar.image(logo_image, width=150)
 
-st.sidebar.header('Serafina em Dados')
+st.sidebar.header('Análise dos dados das eleições 2024')
 
 
-st.sidebar.markdown('''
-<small>🏰⛪🎲 <br> Todo mundo sabe que as entidades públicas são obrigadas por lei a disponibilizar seus dados na internet. Aqui em Serafina não é diferente e a Prefeitura os disponibliza em sei site. E tá tudo certo!</small>
-    ''', unsafe_allow_html=True)
 
 st.sidebar.markdown('''
-<small>Só que, gente, é um monte de planilhazinha que dá uma tristeza só de olhar. Aí, pra deixar isso mais fácil, resolvi dar uma compilada nos dados e vou mostrar tudo bonitinho em gráficos e números, pra gente entender como o dinheiro da cidade tá sendo usado.</small>
+<small>🏰⛪🎲 <br> O TSE disponibiliza e atualiza frequentemente os dados sobre as eleições. Decidi analisá-los e disponibilizar aqui as informações que considero relevatnes</small>
     ''', unsafe_allow_html=True)
 
 
 st.sidebar.markdown('''
-<small>Acredito que isso vai nos ajudar a fiscalizar e cobrar mais responsabilidade da galera que tá cuidando do nosso dinheiro.</small>
+<small>Acredito que isso pode ajudar a conhecer melhor os candidatos que quererm adiministrar nossas cidades.</small>
     ''', unsafe_allow_html=True)
 
 
 st.sidebar.markdown('''
-<small>Antes de qualquer coisa, quero dizer que aqui tem ZERO INFLUÊNCIA POLÍTICA. O objetivo da página é apenas dar luz aos gastos da prefeitura para que cada cidadão tire suas próprias conclusões!</small>
+<small>Antes de qualquer coisa, quero dizer que aqui tem ZERO INFLUÊNCIA POLÍTICA. O objetivo da página é apenas dar luz aos dados para que cada cidadão tire suas próprias conclusões!</small>
     ''', unsafe_allow_html=True)
 
 
@@ -318,10 +222,10 @@ st.sidebar.markdown('''
 
 
 
-st.sidebar.markdown('<small>Este projeto é uma iniciativa individual. A única fonte de dados é o [Portal de Transparência](https://sistemas.serafinacorrea.rs.gov.br/transparencia/) do Município de Serafina Correa/RS. ', unsafe_allow_html=True)
+st.sidebar.markdown('<small>Este projeto é uma iniciativa individual. A única fonte de dados é o [Portal de Dados Abertos do TSE](https://dadosabertos.tse.jus.br/dataset/candidatos-2024). ', unsafe_allow_html=True)
 
 st.sidebar.markdown('''<hr>''', unsafe_allow_html=True)
-st.sidebar.markdown('''<small>[Serafina em Dados v0.1](https://github.com/fabriciosilva/serafina-em-dados)  | 2024 | [Fabrício Silva](https://www.linkedin.com/in/fabriciofsilva/)</small>''', unsafe_allow_html=True)
+st.sidebar.markdown('''<small>[Eleicoes2024 v0.1](https://github.com/fabriciosilva/serafina-em-dados)  | 2024 | [Fabrício Silva](https://www.linkedin.com/in/fabriciofsilva/)</small>''', unsafe_allow_html=True)
 
 
 
