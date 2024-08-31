@@ -182,6 +182,7 @@ with col5:
     st.plotly_chart(partidos, use_container_width=True)
 
 
+df
 
 @st.cache_data
 def get_min(data_frame, column):
