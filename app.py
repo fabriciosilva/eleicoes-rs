@@ -38,7 +38,7 @@ if theme is not None and theme['base'] == 'dark':
 
 cidade = st.selectbox(
     "Trocar Cidade",
-    ("PARAÍ", "CASCA", "NOVA ARAÇÁ", "SERAFINA CORREA", "NOVA BASSANO", 
+    ("PARAÍ", "CASCA", "NOVA ARAÇÁ", "SERAFINA CORREA", "SANTO ANTÔNIO DO PALMA",  "NOVA BASSANO", 
      "NOVA PRATA", "CANGUÇU", 'PELOTAS', 'PASSO FUNDO', 'PORTO ALEGRE', 'SÃO DOMINGOS DO SUL', 'VANINI', 'DAVID CANABARRO', 'VERANÓPOLIS'),
     index=0
 )
